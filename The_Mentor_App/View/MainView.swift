@@ -51,6 +51,7 @@ struct MainView: View {
                 
                 HStack{
                     NavigationViewController(screen: "Chat", destination: ChatView())
+                    HStack{ NavigationViewController(screen: "Find a Mentor", destination: SearchView())}
                 }
             }
             

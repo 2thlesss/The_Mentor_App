@@ -6,12 +6,28 @@
 //
 
 import SwiftUI
+class SearchFieldData : ObservableObject {
+    @Published var jobField = ""
+    @Published var jobSkill1 = ""
+    @Published var jobSkill2 = ""
+    @Published var jobSkill3 = ""
+}
+
 
 struct SearchView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @StateObject var searchFieldData = SearchFieldData()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+       
+        VStack{ TextFieldController(text: $searchFieldData.jobField, placeholder: "Deired Job Field")
+            TextFieldController(text: $searchFieldData.jobSkill1, placeholder: "Skill")
+            TextFieldController(text: $searchFieldData.jobSkill2, placeholder: "Skill")
+            TextFieldController(text: $searchFieldData.jobSkill3, placeholder: "Skill")
+        }
     }
-}
+   
+    }
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {

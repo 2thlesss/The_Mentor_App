@@ -19,14 +19,20 @@ struct SearchView: View {
     @StateObject var searchFieldData = SearchFieldData()
     
     var body: some View {
-       
-        VStack{ TextFieldController(text: $searchFieldData.jobField, placeholder: "Deired Job Field")
-            TextFieldController(text: $searchFieldData.jobSkill1, placeholder: "Skill")
-            TextFieldController(text: $searchFieldData.jobSkill2, placeholder: "Skill")
-            TextFieldController(text: $searchFieldData.jobSkill3, placeholder: "Skill")
+        ZStack{
+            Color(.init(red: 0, green: 255, blue: 255, alpha:0.5)) //light blue
+                .edgesIgnoringSafeArea(.all)
+                
+            
+            VStack{ TextFieldController(text: $searchFieldData.jobField, placeholder: "Deired Job Field")
+                TextFieldController(text: $searchFieldData.jobSkill1, placeholder: "Skill")
+                TextFieldController(text: $searchFieldData.jobSkill2, placeholder: "Skill")
+                TextFieldController(text: $searchFieldData.jobSkill3, placeholder: "Skill")
+            }
         }
     }
-   
+   ///search results goes to the the scroll view to populate
+    ///
     }
 
 struct SearchView_Previews: PreviewProvider {

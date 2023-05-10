@@ -28,12 +28,7 @@ struct SearchView: View {
                 
         
                 VStack{
-                    Text("Search for a Mentor")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .foregroundColor(.init(red: 0, green: 0, blue: 0))
-                        .multilineTextAlignment(.center)
-                        .padding(.bottom, 20.0)
+                   TitleTextController(title: "Search for a Mentor")
                     TextFieldController(text: $searchFieldData.jobField, placeholder: "Deired Job Field")
                     TextFieldController(text: $searchFieldData.jobSkill1, placeholder: "Skill")
                     TextFieldController(text: $searchFieldData.jobSkill2, placeholder: "Skill")

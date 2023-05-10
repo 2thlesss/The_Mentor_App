@@ -12,7 +12,7 @@ struct MainView: View {
         
         ZStack{
             //need a black background
-            Color(.black)
+            Color(.init(red: 0, green: 255, blue: 255, alpha:0.5)) //light blue
                 .edgesIgnoringSafeArea(.all)
             VStack{
                 TitleTextController(title: "Welcome to the Mentor App!")

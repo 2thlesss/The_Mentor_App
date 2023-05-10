@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             ZStack{
-                Color(.black)
+                Color(.init(red: 0, green: 255, blue: 255, alpha:0.5)) //light blue
                     .edgesIgnoringSafeArea(.all)
                 VStack {
                     Text("The Mentor App")

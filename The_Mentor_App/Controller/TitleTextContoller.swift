@@ -16,7 +16,7 @@ struct TitleTextController: View {
         Text(title)
             .font(.largeTitle)
             .fontWeight(.bold)
-            .foregroundColor(Color.white)
+            .foregroundColor(.init(red: 0, green: 0, blue: 255))
             .multilineTextAlignment(.center)
             .padding(.bottom, 20.0)
     }

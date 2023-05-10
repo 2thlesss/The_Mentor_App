@@ -19,6 +19,7 @@
 		97B2A2AA29FADCA000564249 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B2A2A929FADCA000564249 /* MainView.swift */; };
 		97B2A2AE29FAE51300564249 /* TextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B2A2AD29FAE51300564249 /* TextFieldController.swift */; };
 		97D22CA22A0AD4660053C0DB /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D22CA12A0AD4660053C0DB /* SearchView.swift */; };
+		97D22CA42A0B25BA0053C0DB /* TitleTextContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D22CA32A0B25BA0053C0DB /* TitleTextContoller.swift */; };
 		97F196272A02E788007A4BCD /* NavigationLinkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F196262A02E788007A4BCD /* NavigationLinkController.swift */; };
 		97F3E93229F825530016D9FF /* The_Mentor_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F3E93129F825530016D9FF /* The_Mentor_AppApp.swift */; };
 		97F3E93429F825530016D9FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F3E93329F825530016D9FF /* ContentView.swift */; };
@@ -59,6 +60,7 @@
 		97B2A2A929FADCA000564249 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		97B2A2AD29FAE51300564249 /* TextFieldController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldController.swift; path = "../../../ID TImer/ID TImer/Controller/TextFieldController.swift"; sourceTree = "<group>"; };
 		97D22CA12A0AD4660053C0DB /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		97D22CA32A0B25BA0053C0DB /* TitleTextContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextContoller.swift; sourceTree = "<group>"; };
 		97F196262A02E788007A4BCD /* NavigationLinkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkController.swift; sourceTree = "<group>"; };
 		97F3E92E29F825530016D9FF /* The_Mentor_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = The_Mentor_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97F3E93129F825530016D9FF /* The_Mentor_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Mentor_AppApp.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				9712831D29FAC84500BC3346 /* NavigationViewController.swift */,
 				97B2A2AD29FAE51300564249 /* TextFieldController.swift */,
 				9712831F29FAC84B00BC3346 /* CustomBackButton.swift */,
+				97D22CA32A0B25BA0053C0DB /* TitleTextContoller.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				97B2A2A829FAD94B00564249 /* RegisterView.swift in Sources */,
 				9712831529FAC6A500BC3346 /* ChatView.swift in Sources */,
 				9712832029FAC84B00BC3346 /* CustomBackButton.swift in Sources */,
+				97D22CA42A0B25BA0053C0DB /* TitleTextContoller.swift in Sources */,
 				97B2A2A629FAD30800564249 /* LoginView.swift in Sources */,
 				97F3E93429F825530016D9FF /* ContentView.swift in Sources */,
 				97F3E93229F825530016D9FF /* The_Mentor_AppApp.swift in Sources */,

@@ -21,20 +21,25 @@ struct SearchView: View {
     var body: some View {
         ZStack{
             
-                
-                
-                Color(.init(red: 0, green: 255, blue: 255, alpha:0.5)) //light blue
-                    .edgesIgnoringSafeArea(.all)
-                
-        
-                VStack{
-                   TitleTextController(title: "Search for a Mentor")
-                    TextFieldController(text: $searchFieldData.jobField, placeholder: "Deired Job Field")
-                    TextFieldController(text: $searchFieldData.jobSkill1, placeholder: "Skill")
-                    TextFieldController(text: $searchFieldData.jobSkill2, placeholder: "Skill")
-                    TextFieldController(text: $searchFieldData.jobSkill3, placeholder: "Skill")
-                }
+            
+            
+            Color(.init(red: 0, green: 255, blue: 255, alpha:0.5)) //light blue
+                .edgesIgnoringSafeArea(.all)
+            
+            
+            VStack{
+                TitleTextController(title: "Search for a Mentor")
+                TextFieldController(text: $searchFieldData.jobField, placeholder: "Deired Job Field")
+                TextFieldController(text: $searchFieldData.jobSkill1, placeholder: "Skill")
+                TextFieldController(text: $searchFieldData.jobSkill2, placeholder: "Skill")
+                TextFieldController(text: $searchFieldData.jobSkill3, placeholder: "Skill")
+                    
+                Button("Search", action:{})
             }
+            
+            
+        }
+        
         }
     
    ///search results goes to the the scroll view to populate

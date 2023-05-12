@@ -46,6 +46,8 @@ struct SearchView: View {
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
         let profiles = brainTest() // Update function name to brainTest
+        //i dont know why this is out of scope
+        
 
         return SearchView(profiles: profiles)
     }
@@ -55,6 +57,6 @@ func searchMentors(bySkill skill: String, profiles: [TheMentorBrain]) -> [TheMen
     let filteredProfiles = profiles.filter { profile in
         return profile.skills.contains(skill)
     }
-    return filteredProfiles
+    return filteredProfiles // i have no idea why it's saying invalid....
 }
 

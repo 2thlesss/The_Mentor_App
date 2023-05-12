@@ -4,7 +4,6 @@
 //
 //  Created by Thomas Jadie Reeves on 5/9/23.
 //
-
 import SwiftUI
 
 struct SearchView: View {
@@ -41,28 +40,42 @@ struct SearchView: View {
         }
         .padding()
     }
+
+    func searchMentors(bySkill skill: String, profiles: [TheMentorBrain]) -> [TheMentorBrain] {
+        let trimmedSkill = skill.trimmingCharacters(in: .whitespacesAndNewlines)
+        let lowercaseSkill = trimmedSkill.lowercased()
+        
+        let filteredProfiles = profiles.filter { profile in
+            let lowercaseSkills = profile.skills.map { $0.lowercased() }
+            return lowercaseSkills.contains { skill in
+                return skill.range(of: lowercaseSkill) != nil
+            }
+        }
+        
+        return filteredProfiles
+    }
+  
 }
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        let profiles = brainTest() // Update function name to brainTest
-        //i dont know why this is out of scope
+        let profiles = brainTest() 
         
 
         return SearchView(profiles: profiles)
     }
 }
 
-func searchMentors(bySkill skill: String, profiles: [TheMentorBrain]) -> [TheMentorBrain] {
-    let trimmedSkill = skill.trimmingCharacters(in: .whitespacesAndNewlines)
-    let lowercaseSkill = trimmedSkill.lowercased()
-    
-    let filteredProfiles = profiles.filter { profile in
-        let lowercaseSkills = profile.skills.map { $0.lowercased() }
-        return lowercaseSkills.contains(lowercaseSkill)
-    }
-    
-    return filteredProfiles
-}
+//func searchMentors(bySkill skill: String, profiles: [TheMentorBrain]) -> [TheMentorBrain] {
+//    let trimmedSkill = skill.trimmingCharacters(in: .whitespacesAndNewlines)
+//    let lowercaseSkill = trimmedSkill.lowercased()
+//
+//    let filteredProfiles = profiles.filter { profile in
+//        let lowercaseSkills = profile.skills.map { $0.lowercased() }
+//        return lowercaseSkills.contains(lowercaseSkill)
+//    }
+//
+//    return filteredProfiles
+//}
 
 

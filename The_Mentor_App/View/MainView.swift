@@ -19,7 +19,7 @@ struct MainView: View {
         Spacer()
                 HStack{
                     NavigationViewController(screen: "Chat", destination: ChatView())
-                    HStack{ NavigationViewController(screen: "Find a Mentor", destination: SearchView())}
+                    HStack{ NavigationViewController(screen: "Find a Mentor", destination: SearchView(profiles: <#[TheMentorBrain]#>)}
                 }
             }
         }

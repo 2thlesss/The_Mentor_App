@@ -54,9 +54,15 @@ struct SearchView_Previews: PreviewProvider {
 }
 
 func searchMentors(bySkill skill: String, profiles: [TheMentorBrain]) -> [TheMentorBrain] {
+    let trimmedSkill = skill.trimmingCharacters(in: .whitespacesAndNewlines)
+    let lowercaseSkill = trimmedSkill.lowercased()
+    
     let filteredProfiles = profiles.filter { profile in
-        return profile.skills.contains(skill)
+        let lowercaseSkills = profile.skills.map { $0.lowercased() }
+        return lowercaseSkills.contains(lowercaseSkill)
     }
-    return filteredProfiles // i have no idea why it's saying invalid....
+    
+    return filteredProfiles
 }
+
 

@@ -25,10 +25,6 @@
 		97DB983D2A0EF09900800D81 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB98362A0EF09900800D81 /* ImageViewController.swift */; };
 		97DB983E2A0EF09900800D81 /* NavigationLinkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB98372A0EF09900800D81 /* NavigationLinkController.swift */; };
 		97DB983F2A0EF09900800D81 /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB98382A0EF09900800D81 /* CustomBackButton.swift */; };
-		97DB98412A0EF5B800800D81 /* Controller in Resources */ = {isa = PBXBuildFile; fileRef = 97DB98402A0EF5B800800D81 /* Controller */; };
-		97DB98432A0EF5F000800D81 /* Controller in Resources */ = {isa = PBXBuildFile; fileRef = 97DB98422A0EF5F000800D81 /* Controller */; };
-		97DB98452A0EF60100800D81 /* Controller in Resources */ = {isa = PBXBuildFile; fileRef = 97DB98442A0EF60100800D81 /* Controller */; };
-		97DB98472A0EF60B00800D81 /* Controller in Resources */ = {isa = PBXBuildFile; fileRef = 97DB98462A0EF60B00800D81 /* Controller */; };
 		97F3E93229F825530016D9FF /* The_Mentor_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F3E93129F825530016D9FF /* The_Mentor_AppApp.swift */; };
 		97F3E93429F825530016D9FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F3E93329F825530016D9FF /* ContentView.swift */; };
 		97F3E93629F825540016D9FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97F3E93529F825540016D9FF /* Assets.xcassets */; };
@@ -74,10 +70,6 @@
 		97DB98362A0EF09900800D81 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		97DB98372A0EF09900800D81 /* NavigationLinkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationLinkController.swift; sourceTree = "<group>"; };
 		97DB98382A0EF09900800D81 /* CustomBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
-		97DB98402A0EF5B800800D81 /* Controller */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Controller; sourceTree = "<group>"; };
-		97DB98422A0EF5F000800D81 /* Controller */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Controller; sourceTree = "<group>"; };
-		97DB98442A0EF60100800D81 /* Controller */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Controller; sourceTree = "<group>"; };
-		97DB98462A0EF60B00800D81 /* Controller */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Controller; sourceTree = "<group>"; };
 		97F3E92E29F825530016D9FF /* The_Mentor_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = The_Mentor_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97F3E93129F825530016D9FF /* The_Mentor_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Mentor_AppApp.swift; sourceTree = "<group>"; };
 		97F3E93329F825530016D9FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -145,14 +137,10 @@
 			isa = PBXGroup;
 			children = (
 				97DB98322A0EF09900800D81 /* BubbleButtonStyle.swift */,
-				97DB98402A0EF5B800800D81 /* Controller */,
 				97DB98382A0EF09900800D81 /* CustomBackButton.swift */,
-				97DB98422A0EF5F000800D81 /* Controller */,
 				97DB98362A0EF09900800D81 /* ImageViewController.swift */,
-				97DB98442A0EF60100800D81 /* Controller */,
 				97DB98372A0EF09900800D81 /* NavigationLinkController.swift */,
 				97DB98332A0EF09900800D81 /* NavigationViewController.swift */,
-				97DB98462A0EF60B00800D81 /* Controller */,
 				97DB98342A0EF09900800D81 /* TextFieldController.swift */,
 				97DB98352A0EF09900800D81 /* TitleTextContoller.swift */,
 			);
@@ -323,10 +311,6 @@
 			files = (
 				97F3E93929F825540016D9FF /* Preview Assets.xcassets in Resources */,
 				97F3E93629F825540016D9FF /* Assets.xcassets in Resources */,
-				97DB98472A0EF60B00800D81 /* Controller in Resources */,
-				97DB98432A0EF5F000800D81 /* Controller in Resources */,
-				97DB98452A0EF60100800D81 /* Controller in Resources */,
-				97DB98412A0EF5B800800D81 /* Controller in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

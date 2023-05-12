@@ -1,6 +1,6 @@
 //
 //  ImageViewController.swift
-//  ID TImer
+//  The_Mentor_App
 //
 //  Created by Thomas Jadie Reeves on 4/11/23.
 //

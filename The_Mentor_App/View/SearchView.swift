@@ -6,48 +6,55 @@
 //
 
 import SwiftUI
-class SearchFieldData : ObservableObject {
-    @Published var jobField = ""
-    @Published var jobSkill1 = ""
-    @Published var jobSkill2 = ""
-    @Published var jobSkill3 = ""
-}
-
 
 struct SearchView: View {
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @StateObject var searchFieldData = SearchFieldData()
-    
+    @State private var skillQuery = ""
+    @State private var filteredProfiles: [TheMentorBrain] = []
+
+    let profiles: [TheMentorBrain]
+
     var body: some View {
-        ZStack{
-            
-            
-            
-            Color(.init(red: 0, green: 255, blue: 255, alpha:0.5)) //light blue
-                .edgesIgnoringSafeArea(.all)
-            
-            
-            VStack{
-                TitleTextController(title: "Search for a Mentor")
-                TextFieldController(text: $searchFieldData.jobField, placeholder: "Deired Job Field")
-                TextFieldController(text: $searchFieldData.jobSkill1, placeholder: "Skill")
-                TextFieldController(text: $searchFieldData.jobSkill2, placeholder: "Skill")
-                TextFieldController(text: $searchFieldData.jobSkill3, placeholder: "Skill")
-                    
-                Button("Search", action:{})
+        VStack {
+            TextField("Enter skill", text: $skillQuery)
+                .padding()
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+
+            Button("Search") {
+                filteredProfiles = searchMentors(bySkill: skillQuery, profiles: profiles)
             }
-            
-            
+            .padding()
+            .foregroundColor(.white)
+            .background(Color.blue)
+            .cornerRadius(8)
+
+            List(filteredProfiles, id: \.name) { profile in
+                VStack(alignment: .leading) {
+                    Text(profile.name)
+                        .font(.headline)
+                    Text(profile.headline)
+                        .font(.subheadline)
+                    Text(profile.summary)
+                        .font(.subheadline)
+                }
+            }
+            .padding()
         }
-        
-        }
-    
-   ///search results goes to the the scroll view to populate
-    ///
+        .padding()
     }
+}
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView()
+        let profiles = brainTest() // Update function name to brainTest
+
+        return SearchView(profiles: profiles)
     }
 }
+
+func searchMentors(bySkill skill: String, profiles: [TheMentorBrain]) -> [TheMentorBrain] {
+    let filteredProfiles = profiles.filter { profile in
+        return profile.skills.contains(skill)
+    }
+    return filteredProfiles
+}
+

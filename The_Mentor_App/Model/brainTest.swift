@@ -10,102 +10,6 @@ func brainTest() -> [TheMentorBrain] {
     let jsonData = """
     [
         {
-            "name": "Emily Johnson",
-            "headline": "Experienced Cybersecurity Project Manager | Ensuring Digital Safety & Risk Mitigation",
-            "summary": "Results-driven and highly skilled cybersecurity professional with a deep expertise in project management, risk assessment, and security strategy. Dedicated to ensuring regulatory compliance and mitigating potential risks through comprehensive security measures. Proven track record in incident response, conducting security audits, and performing vulnerability and penetration testing. Strong abilities in stakeholder management and team leadership, driving collaborative efforts to achieve cybersecurity objectives. Passionate about continuously enhancing security practices to safeguard critical assets and maintain the confidentiality, integrity, and availability of information systems",
-            "experience": [
-                {
-                    "title": "Project Manager, Cybersecurity Division",
-                    "company": "XYZ Corporation",
-                    "dates": "2018 - Present",
-                    "responsibilities": [
-                        "Lead cross-functional teams in executing complex cybersecurity projects from initiation to completion.",
-                        "Develop and implement comprehensive security strategies and policies..."
-                    ]
-                },
-                {
-                    "title": "Senior Security Analyst",
-                    "company": "ABC Corporation",
-                    "dates": "2015 - 2018",
-                    "responsibilities": [
-                        "Conducted security assessments, vulnerability scans, and penetration tests...",
-                        "Assisted in the development and implementation of security policies..."
-                    ]
-                }
-            ],
-            "education": {
-                "degree": "Bachelor of Science in Computer Science",
-                "university": "XYZ University",
-                "dates": "2011 - 2015"
-            },
-            "certifications": [
-                "Certified Information Systems Security Professional (CISSP)",
-                "Certified Ethical Hacker (CEH)",
-                "Project Management Professional (PMP)"
-            ],
-            "skills": [
-                "Project Management",
-                "Risk Assessment",
-                "Security Strategy",
-                "Regulatory Compliance",
-                "Incident Response",
-                "Security Audits",
-                "Vulnerability Assessment",
-                "Penetration Testing",
-                "Stakeholder Management",
-                "Team Leadership"
-            ]
-        },
-    
-        {
-            "name": "Alex Thompson",
-            "headline": "Dedicated Cybersecurity Program Manager | Championing Robust Security Measures & Mitigating Risks",
-            "summary": "Highly skilled and results-driven cybersecurity professional with a proven track record in leading the successful delivery of large-scale cybersecurity programs. Expertise in risk management, incident response, and security training. Dedicated to championing robust security measures and mitigating risks through the implementation of comprehensive security frameworks. Strong abilities in stakeholder management and team leadership, driving collaborative efforts to achieve cybersecurity objectives. Passionate about continuously enhancing security practices to safeguard critical assets and maintain the confidentiality, integrity, and availability of information systems.",
-            "experience": [
-                {
-                    "title": "Program Manager, Cybersecurity Division",
-                    "company": "LMN Technologies",
-                    "dates": "2019 - Present",
-                    "responsibilities": [
-                        "Orchestrate the successful delivery of large-scale cybersecurity programs, ensuring seamless collaboration among cross-functional teams.",
-                        "Design and enforce robust security frameworks and best practices..."
-                    ]
-                },
-                {
-                    "title": "Security Consultant",
-                    "company": "OPQ Solutions",
-                    "dates": "2016 - 2019",
-                    "responsibilities": [
-                        "Orchestrate the successful delivery of large-scale cybersecurity programs, ensuring seamless collaboration among cross-functional teams. This responsibility involves overseeing and coordinating various cybersecurity initiatives and projects to achieve the desired outcomes, such as implementing robust security measures, addressing vulnerabilities, and safeguarding critical systems and data.",
-                        "Design and enforce robust security frameworks and best practices. Alex is responsible for developing comprehensive security frameworks and establishing best practices that align with industry standards and regulations. This includes defining security policies, procedures, and guidelines to protect against potential threats and ensure regulatory compliance",
-                    ]
-                }
-            ],
-            "education": {
-                "degree": "Bachelor of Science in Information Systems",
-                "university": "DEF University",
-                "dates": "2012 - 2016"
-            },
-            "certifications": [
-                "Certified Information Security Manager (CISM)",
-                "Certified Cloud Security Professional (CCSP)",
-                "Agile Certified Practitioner (ACP)"
-            ],
-            "skills": [
-                "Program Management",
-                "Risk Management",
-                "Cloud Security",
-                "Data Privacy",
-                "Incident Management",
-                "Security Training",
-                "Threat Intelligence",
-                "Secure Software Development",
-                "Vendor Management",
-                "Communication"
-            ]
-        },
-    
-        {
                     "name": "Oliver Williams",
                     "headline": "Dynamic Cybersecurity Operations Manager | Fostering Cyber Resilience & Compliance",
                     "summary": "Innovative and proactive Cybersecurity Operations Manager with a strong background in managing and optimizing cybersecurity operations. Dedicated to fostering cyber resilience and ensuring compliance with industry standards. Skilled in steering day-to-day activities of security teams, driving the creation and updating of security protocols, and implementing effective security measures.",
@@ -160,12 +64,14 @@ func brainTest() -> [TheMentorBrain] {
                         "Effective Communication"
                     ]
                 }
+    
             ]
     
     """.data(using: .utf8)!
-/// ends with ]}]
+    /// ends with ]}]
     do {
         let profiles = try JSONDecoder().decode([TheMentorBrain].self, from: jsonData)
+        print(profiles)
         return profiles
     } catch {
         print("Error decoding JSON: \(error)")

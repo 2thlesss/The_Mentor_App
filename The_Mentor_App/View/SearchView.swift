@@ -11,14 +11,18 @@ struct SearchView: View {
     @State private var filteredProfiles: [TheMentorBrain] = []
 
     let profiles: [TheMentorBrain]
-
+    init(profiles: [TheMentorBrain]) {
+            self.profiles = profiles
+            print(self.profiles)  // Print the profiles to the console
+        }
     var body: some View {
         
         NavigationView {
             ZStack{ Color(.init(red: 0, green: 255, blue: 255, alpha:0.5)) //light blue
                     .edgesIgnoringSafeArea(.all)
                 VStack {
-                   Text ("Example - Leadership, Managment, Risk, Compliance")
+                   
+Text ("Example - Leadership, Managment, Risk, Compliance")
                         .font(.subheadline)
                     TextField("Enter skill", text: $skillQuery)
                         .padding()
@@ -26,6 +30,7 @@ struct SearchView: View {
                     
                     Button("Search") {
                         filteredProfiles = searchMentors(bySkill: skillQuery, profiles: profiles)
+                        print (filteredProfiles)
                     }
                     .padding()
                     .foregroundColor(.white)
@@ -80,3 +85,4 @@ struct SearchView_Previews: PreviewProvider {
 }
 
 
+// put a nav view to the calendar and booking page

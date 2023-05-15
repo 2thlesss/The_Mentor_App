@@ -27,15 +27,18 @@ struct SearchView: View {
             .cornerRadius(8)
 
             List(filteredProfiles, id: \.name) { profile in
-                VStack(alignment: .leading) {
-                    Text(profile.name)
-                        .font(.headline)
-                    Text(profile.headline)
-                        .font(.subheadline)
-                    Text(profile.summary)
-                        .font(.subheadline)
+                NavigationLink(destination: ProfileDetailView(profile: profile)) {
+                    VStack(alignment: .leading) {
+                        Text(profile.name)
+                            .font(.headline)
+                        Text(profile.headline)
+                            .font(.subheadline)
+                        Text(profile.summary)
+                            .font(.subheadline)
+                    }
                 }
             }
+
             .padding()
         }
         .padding()

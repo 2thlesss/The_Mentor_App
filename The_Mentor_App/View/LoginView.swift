@@ -20,8 +20,8 @@ struct LoginView: View {
     var body: some View {
        
             ZStack{
-                Color(.green)
-                    .ignoresSafeArea()
+                Color(.init(red: 0, green: 255, blue: 255, alpha:0.5)) //light blue
+                    .edgesIgnoringSafeArea(.all)
                 HStack{
                     Spacer()
                     VStack{

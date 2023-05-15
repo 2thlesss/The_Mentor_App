@@ -30,6 +30,9 @@ struct ProfileDetailView: View {
                     Text(profile.summary)
                         .font(.subheadline)
                         .padding(4)
+                    ForEach(profile.skills, id:\.self) { skill in
+                        Text(skill)
+                    }
                     
                     ForEach(profile.experience, id: \.title) { experience in
                         VStack(alignment: .leading) {

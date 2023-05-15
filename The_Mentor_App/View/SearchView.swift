@@ -13,7 +13,7 @@ struct SearchView: View {
     let profiles: [TheMentorBrain]
     init(profiles: [TheMentorBrain]) {
             self.profiles = profiles
-            print(self.profiles)  // Print the profiles to the console
+            
         }
     var body: some View {
         

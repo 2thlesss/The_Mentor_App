@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct MainView: View {
-    let profiles: [TheMentorBrain] = [] // Provide the array of TheMentorBrain instances
+    let profiles: [TheMentorBrain] = TheMentorBrain.sampleData
 
     var body: some View {
         ZStack {
@@ -20,7 +20,11 @@ struct MainView: View {
                 HStack {
                     NavigationViewController(screen: "Chat", destination: ChatView())
                     NavigationViewController(screen: "Find a Mentor", destination: SearchView(profiles: profiles)) // Provide the profiles array
+                    NavigationViewController (screen: "demo array", destination: ProfileDetailView(profile: TheMentorBrain.sampleData[0]))
+                    
                 }
+                
+                
             }
         }
     }

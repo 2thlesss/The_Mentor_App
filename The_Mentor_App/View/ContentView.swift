@@ -28,19 +28,21 @@ struct ContentView: View {
                     Spacer()
                 }
                 HStack{
-                    NavigationViewController(screen: "Login", destination: LoginView())
-                    NavigationViewController(screen: "Register", destination: RegisterView()
                     
-                    )
                     
+                    
+                    NavigationLinkController(destination: LoginView(), label: "Login")
+                    
+                    NavigationLinkController(destination: RegisterView(), label: "Register")
                     
                 }
             }
         }
     }
+}
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
             ContentView()
         }
     }
-}
+

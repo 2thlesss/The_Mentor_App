@@ -67,17 +67,34 @@ Text ("Example - Leadership, Managment, Risk, Compliance")
         
         let filteredProfiles = profiles.filter { profile in
             let lowercaseSkills = profile.skills.map { $0.lowercased() }
-            return lowercaseSkills.contains { skill in
-                return skill.range(of: lowercaseSkill) != nil
+            let isMatch = lowercaseSkills.contains { skill in
+                let isMatching = skill.range(of: lowercaseSkill) != nil
+                print("Skill:", skill, "Query:", lowercaseSkill, "Is Matching:", isMatching)
+                return isMatching
             }
+            return isMatch
         }
         
         return filteredProfiles
     }
+
+//    func searchMentors(bySkill skill: String, profiles: [TheMentorBrain]) -> [TheMentorBrain] {
+//        let trimmedSkill = skill.trimmingCharacters(in: .whitespacesAndNewlines)
+//        let lowercaseSkill = trimmedSkill.lowercased()
+//
+//        let filteredProfiles = profiles.filter { profile in
+//            let lowercaseSkills = profile.skills.map { $0.lowercased() }
+//            return lowercaseSkills.contains { skill in
+//                return skill.range(of: lowercaseSkill) != nil
+//            }
+//        }
+//
+//        return filteredProfiles
+//    }
 }
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        let profiles = brainTest() 
+        let profiles : [TheMentorBrain] = TheMentorBrain.sampleData
         
 
         return SearchView(profiles: profiles)

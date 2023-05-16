@@ -19,23 +19,33 @@ struct ProfileDetailView: View {
                 
                 VStack(alignment: .leading) {
                     Text(profile.name)
-                
-                        .font(.headline)
+                        .font(.title)
                         .padding(4)
+                        .background(RoundedRectangle(cornerRadius: 0)
+                            .stroke(Color.black, lineWidth: 2))
                     
                     Text(profile.headline)
-                        .font(.subheadline)
+                        .font(.headline)
                         .padding(4)
                         .multilineTextAlignment(.leading)
+                    Divider()
+                        .background(Color.black)
+                        .padding(.horizontal)
                     Text(profile.summary)
                         .font(.subheadline)
                         .padding(4)
+                    Divider()
+                        .background(Color.black)
+                        .padding(.horizontal)
                     ForEach(profile.skills, id:\.self) { skill in
                         Text(skill)
                     }
                     
                     ForEach(profile.experience, id: \.title) { experience in
                         VStack(alignment: .leading) {
+                            Divider()
+                                .background(Color.black)
+                                .padding(.horizontal)
                             Text(experience.title)
                                 .font(.subheadline)
                                 .padding(4)

@@ -10,6 +10,7 @@
 		9709FAAC2A0F077B00A25308 /* README.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9709FAAB2A0F077B00A25308 /* README.rtf */; };
 		970DE6342A13BA340082D681 /* brainTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB981E2A0EEBAD00800D81 /* brainTest.swift */; };
 		970DE6372A13BCC70082D681 /* testBrain.json in Resources */ = {isa = PBXBuildFile; fileRef = 970DE6362A13BCC70082D681 /* testBrain.json */; };
+		970DE6392A1413AE0082D681 /* LinkSSOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970DE6382A1413AE0082D681 /* LinkSSOView.swift */; };
 		9712831529FAC6A500BC3346 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9712831429FAC6A500BC3346 /* ChatView.swift */; };
 		9712832229FAC86900BC3346 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9712832129FAC86900BC3346 /* LaunchScreen.swift */; };
 		97626EAC2A12512500861E26 /* ProfileDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97626EAB2A12512500861E26 /* ProfileDetailView.swift */; };
@@ -56,6 +57,7 @@
 /* Begin PBXFileReference section */
 		9709FAAB2A0F077B00A25308 /* README.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
 		970DE6362A13BCC70082D681 /* testBrain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = testBrain.json; path = The_Mentor_App/Assets.xcassets/testBrain.json; sourceTree = SOURCE_ROOT; };
+		970DE6382A1413AE0082D681 /* LinkSSOView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkSSOView.swift; sourceTree = "<group>"; };
 		9712831429FAC6A500BC3346 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		9712832129FAC86900BC3346 /* LaunchScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LaunchScreen.swift; path = "../../../ID TImer/ID TImer/LaunchScreen.swift"; sourceTree = "<group>"; };
 		97626EAB2A12512500861E26 /* ProfileDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailView.swift; sourceTree = "<group>"; };
@@ -124,12 +126,13 @@
 			children = (
 				9712832129FAC86900BC3346 /* LaunchScreen.swift */,
 				97F3E93329F825530016D9FF /* ContentView.swift */,
-				97D22CA12A0AD4660053C0DB /* SearchView.swift */,
-				97B2A2A929FADCA000564249 /* MainView.swift */,
-				97B2A2A729FAD94B00564249 /* RegisterView.swift */,
 				97B2A2A529FAD30800564249 /* LoginView.swift */,
-				9712831429FAC6A500BC3346 /* ChatView.swift */,
+				97B2A2A729FAD94B00564249 /* RegisterView.swift */,
+				97B2A2A929FADCA000564249 /* MainView.swift */,
+				97D22CA12A0AD4660053C0DB /* SearchView.swift */,
 				97626EAB2A12512500861E26 /* ProfileDetailView.swift */,
+				9712831429FAC6A500BC3346 /* ChatView.swift */,
+				970DE6382A1413AE0082D681 /* LinkSSOView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				97DB98392A0EF09900800D81 /* BubbleButtonStyle.swift in Sources */,
 				97DB981D2A0EEBA300800D81 /* searchBrain.swift in Sources */,
 				97DB98222A0EEBAD00800D81 /* TheMentorBrain.swift in Sources */,
+				970DE6392A1413AE0082D681 /* LinkSSOView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

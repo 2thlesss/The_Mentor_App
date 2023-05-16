@@ -13,6 +13,8 @@ struct ContentView: View {
             ZStack{
                 Color(.init(red: 0, green: 255, blue: 255, alpha:0.5)) //light blue
                     .edgesIgnoringSafeArea(.all)
+                
+                
                 VStack {
                     Text("The Mentor App")
                     // i want a custom font of AmericanTypewriter-Bold

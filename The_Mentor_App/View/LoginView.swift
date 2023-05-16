@@ -29,7 +29,7 @@ struct LoginView: View {
                         Text("Login")
                             .font(.largeTitle)
                             .fontWeight(.bold)
-                            .foregroundColor(Color(.white))
+                            .foregroundColor(Color(.black))
                             .padding(.bottom, 20)
                         TextFieldController(text: $loginTextFieldData.userName,
                                             placeholder: "User Name")

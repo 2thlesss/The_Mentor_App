@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct MainView: View {
-    let profiles: [TheMentorBrain] = TheMentorBrain.sampleData
+    @State private var  profiles : [TheMentorBrain] = []
 
     var body: some View {
         ZStack {
@@ -16,16 +16,19 @@ struct MainView: View {
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 TitleTextController(title: "Welcome to the Mentor App!")
-                Spacer()
+            
                 HStack {
-                    NavigationViewController(screen: "Chat", destination: ChatView())
-                    NavigationViewController(screen: "Find a Mentor", destination: SearchView(profiles: profiles)) // Provide the profiles array
-                    NavigationViewController (screen: "demo array", destination: ProfileDetailView(profile: TheMentorBrain.sampleData[0]))
+                    NavigationLinkController(destination: SearchView(profiles: profiles), label: "Find a Mentor")
+                   
+                
                     
                 }
                 
                 
             }
+        }
+        .onAppear{
+            profiles = brainTest()
         }
     }
 }

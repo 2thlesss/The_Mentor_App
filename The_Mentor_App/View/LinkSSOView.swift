@@ -4,6 +4,7 @@
 //
 //  Created by Thomas Jadie Reeves on 5/16/23.
 //
+// https://github.com/himanshusingh1/HSLinkedINAuthenticator // this is the package to install for this file to work.
 
 //import UIKit
 //import HSLinkedINAuthenticator

@@ -11,40 +11,39 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             ZStack{
+                LinearGradient(gradient: Gradient(colors: [Color(red: 202/255, green: 204/255, blue: 206/255),Color(red: 0/255, green: 119/255, blue: 181/255) ]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .edgesIgnoringSafeArea(.all)// Extend the gradient to the edges of the view
+                
+                
                 Color(.init(red: 0, green: 255, blue: 255, alpha:0.5)) //light blue
                     .edgesIgnoringSafeArea(.all)
-                
+                //split the background into two colors
                 
                 VStack {
-                    Text("The Mentor App")
-                    // i want a custom font of AmericanTypewriter-Bold
-                        .font(.custom("AmericanTypewriter-Bold", size: 50))
-                    //center the text
-                        .multilineTextAlignment(.center)
-                        .padding()
-                    //soft blue background oval behind the text
-                        .background(Color(.systemBlue))
-                        .cornerRadius(20)
-                        .foregroundColor(.white)
-                        .padding()
+                    TitleTextController(title: "The Mentor App")
                     Spacer()
                 }
-                HStack{
+                
+                VStack{
                     
                     
                     
                     NavigationLinkController(destination: LoginView(), label: "Login")
-                    
+                    Spacer()
+                        .frame(minHeight: 0, idealHeight: 30, maxHeight: 50)
                     NavigationLinkController(destination: RegisterView(), label: "Register")
                     
+                }
+                VStack{
+                    Spacer()
                 }
             }
         }
     }
 }
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
+}
 

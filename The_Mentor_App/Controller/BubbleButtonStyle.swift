@@ -17,13 +17,15 @@ struct BubbleButtonStyle: ButtonStyle {
     
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
-            .foregroundColor(foregroundColor)
-            .padding(padding)
-            .background(
-                Circle()
-                    .fill(backgroundColor)
-                    .opacity(configuration.isPressed ? 0.5 : 1.0)
-            )
+            .font(.title)
+            .bold()
+            .foregroundColor(.white)
+            .padding()
+            .frame(width: 220, height: 60)
+            .background(Color(red: 0/255, green: 160/255, blue: 220/255))
+            .cornerRadius(15.0)
+            .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y:5)
+            
             .scaleEffect(configuration.isPressed ? 0.9 : 1.0)
     }
 }

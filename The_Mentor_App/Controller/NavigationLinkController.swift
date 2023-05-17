@@ -17,10 +17,12 @@ struct NavigationLinkController<Destination: View>: View {
     var body: some View {
         NavigationLink(destination: destination ){Text(label)}
             .font(.title)
+            .bold()
             .foregroundColor(.white)
             .padding()
             .frame(width: 220, height: 60)
-            .background(Color(.blue))
+            .background(Color(red: 0/255, green: 160/255, blue: 220/255))
             .cornerRadius(15.0)
+            .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y:5)
     }
 }

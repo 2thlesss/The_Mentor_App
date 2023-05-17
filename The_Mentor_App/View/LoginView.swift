@@ -20,20 +20,17 @@ struct LoginView: View {
     var body: some View {
        
             ZStack{
-                Color(.init(red: 0, green: 255, blue: 255, alpha:0.5)) //light blue
-                    .edgesIgnoringSafeArea(.all)
+                LinearGradient(gradient: Gradient(colors: [Color(red: 202/255, green: 204/255, blue: 206/255),Color(red: 0/255, green: 119/255, blue: 181/255) ]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .edgesIgnoringSafeArea(.all) // Extend the gradient to the edges of the view
+                
                 HStack{
                     Spacer()
                     VStack{
                         Spacer()
-                        Text("Login")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .foregroundColor(Color(.black))
-                            .padding(.bottom, 20)
+                        TitleTextController(title: "Login")
                         TextFieldController(text: $loginTextFieldData.userName,
                                             placeholder: "User Name")
-                        TextFieldController(text: $loginTextFieldData.passWord, placeholder: "password")
+                        TextFieldController(text: $loginTextFieldData.passWord, placeholder: "Password")
                             .padding()
                         Spacer()
                         ////                    SecureField("Password", text: .constant(""))

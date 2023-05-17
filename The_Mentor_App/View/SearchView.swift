@@ -18,26 +18,34 @@ struct SearchView: View {
     var body: some View {
         
         
-            ZStack{ Color(.init(red: 0, green: 255, blue: 255, alpha:0.5)) //light blue
-                    .edgesIgnoringSafeArea(.all)
+            ZStack{LinearGradient(gradient: Gradient(colors: [Color(red: 202/255, green: 204/255, blue: 206/255),Color(red: 0/255, green: 119/255, blue: 181/255) ]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .edgesIgnoringSafeArea(.all) // Extend the gradient to the edges of the view
+                
                 VStack {
-                   Text("Mentor Search")
-                        .bold()
-                        .font(.largeTitle)
-Text ("Example - Leadership, Managment, Risk, Compliance")
+                 TitleTextController(title: "The Mentor App")
+                    Text ("Search for a Mentor")
+                        .font(.system(size: 40))
+                    Text ("Key word examples - Leadership, Management, Security, Communication")
                         .font(.footnote)
-                    TextField("Enter skill", text: $skillQuery)
+                    
+                   
+                    
+                              TextField("Enter skill", text: $skillQuery)
                         .padding()
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     
                     Button("Search") {
                         filteredProfiles = searchMentors(bySkill: skillQuery, profiles: profiles)
-                        print (filteredProfiles)
+                        
                     }
-                    .padding()
+                    .font(.title)
+                    .bold()
                     .foregroundColor(.white)
-                    .background(Color.blue)
-                    .cornerRadius(8)
+                    .padding()
+                    .frame(width: 220, height: 60)
+                    .background(Color(red: 0/255, green: 160/255, blue: 220/255))
+                    .cornerRadius(15.0)
+                    .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y:5)
                     
                     List(filteredProfiles, id: \.name) { profile in
                         NavigationLink(destination: ProfileDetailView(profile: profile)) {

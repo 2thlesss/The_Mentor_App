@@ -11,13 +11,15 @@ struct MainView: View {
 
     var body: some View {
         ZStack {
-            // Background color
-            Color(.init(red: 0, green: 255, blue: 255, alpha: 0.5))
-                .edgesIgnoringSafeArea(.all)
-            VStack {
-                TitleTextController(title: "Welcome to the Mentor App!")
+            LinearGradient(gradient: Gradient(colors: [Color(red: 202/255, green: 204/255, blue: 206/255),Color(red: 0/255, green: 119/255, blue: 181/255) ]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                .edgesIgnoringSafeArea(.all) // Extend the gradient to the edges of the view
             
+            
+            VStack {
+                TitleTextController(title: "The Mentor App")
+        
                 HStack {
+                    
                     NavigationLinkController(destination: SearchView(profiles: profiles), label: "Find a Mentor")
                    
                 

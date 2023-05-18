@@ -15,8 +15,7 @@ struct ContentView: View {
                     .edgesIgnoringSafeArea(.all)// Extend the gradient to the edges of the view
                 
                 
-                Color(.init(red: 0, green: 255, blue: 255, alpha:0.5)) //light blue
-                    .edgesIgnoringSafeArea(.all)
+                
                 //split the background into two colors
                 
                 VStack {

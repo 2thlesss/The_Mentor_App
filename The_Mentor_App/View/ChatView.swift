@@ -4,42 +4,75 @@
 //
 //  Created by Thomas Jadie Reeves on 4/27/23.
 //
-
 import SwiftUI
+import Firebase
+import FirebaseAuth
 
 struct ChatView: View {
-    @State private var message: String = ""
-    @State private var messages: [String] = []
-    
+    @StateObject private var chatViewModel = ChatViewModel()
+
+    @State private var messageText = ""
+
     var body: some View {
-        VStack {
-            List(messages, id: \.self) { message in
-                Text(message)
-            }
-            HStack {
-                TextField("Type your message", text: $message)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .background(Color.green)
-                Button("Send") {
-                    messages.append(message)
-                    message = ""
+        NavigationView {
+            VStack {
+                List(chatViewModel.messages) { message in
+                    MessageRow(message: message)
                 }
-                .foregroundColor(.white)
-                .padding(.horizontal, 10)
-                .background(Color.blue)
-                .cornerRadius(5)
+                .listStyle(.plain)
+
+                HStack {
+                    TextField("Enter message", text: $messageText)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    Button(action: {
+                        chatViewModel.sendMessage(messageText)
+                        messageText = ""
+                    }) {
+                        Image(systemName: "paperplane")
+                    }
+                    .padding(.horizontal)
+                }
+                .padding()
             }
-            .padding()
-            .background(Color.green)
+            .navigationTitle(Text("Chat"))
+            .navigationBarItems(trailing: Button(action: {
+                chatViewModel.logout()
+            }) {
+                Text("Logout")
+            })
         }
-       
+        .onAppear {
+            chatViewModel.loadMessages()
+        }
     }
 }
 
-    struct ChatView_Previews: PreviewProvider {
-        static var previews: some View {
-            ChatView()
+struct MessageRow: View {
+    var message: Message
+
+    var body: some View {
+        HStack {
+            if message.sender == Auth.auth().currentUser?.email {
+                Spacer()
+                Text(message.body)
+                    .padding()
+                    .background(Color(red: 0/255, green: 160/255, blue: 220/255))
+                    .foregroundColor(Color(red: 0/255, green: 160/255, blue: 220/255))
+                    .cornerRadius(10)
+            } else {
+                Text(message.body)
+                    .padding()
+                    .background(Color(red: 0/255, green: 160/255, blue: 220/255))
+                    .foregroundColor(Color(red: 0/255, green: 160/255, blue: 220/255))
+                    .cornerRadius(10)
+                Spacer()
+            }
         }
     }
-    
+}
 
+struct ChatView_Previews: PreviewProvider {
+    static var previews: some View {
+        ChatView()
+    }
+}

@@ -7,10 +7,13 @@
 
 import SwiftUI
 import UIKit
+import Firebase
+
 @main
 struct The_Mentor_AppApp: App {
     @StateObject private var appState = AppState()
     let profiles: [TheMentorBrain] = [] // Provide the array of TheMentorBrain instances
+    
     var body: some Scene {
         WindowGroup {
             if appState.showingLaunchScreen {
@@ -30,4 +33,14 @@ struct The_Mentor_AppApp: App {
 
 class AppState: ObservableObject {
     @Published var showingLaunchScreen: Bool = true
+}
+
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        FirebaseApp.configure() // Initialize Firebase
+        
+        // Additional configuration or setup for Firebase can be done here if needed
+        
+        return true
+    }
 }

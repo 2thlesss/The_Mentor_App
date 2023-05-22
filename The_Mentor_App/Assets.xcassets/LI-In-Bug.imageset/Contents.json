@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "GPL@3x.png",
+      "filename" : "LI-In-Bug.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "GPL@3x@2x.png",
+      "filename" : "LI-In-Bug@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "GPL@3x@3x.png",
+      "filename" : "LI-In-Bug@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

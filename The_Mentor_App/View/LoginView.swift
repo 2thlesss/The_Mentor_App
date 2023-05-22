@@ -20,39 +20,39 @@ struct LoginView: View {
     var body: some View {
        
             ZStack{
-                Color(.green)
-                    .ignoresSafeArea()
-                HStack{
-                    Spacer()
-                    VStack{
-                        Spacer()
-                        Text("Login")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .foregroundColor(Color(.white))
-                            .padding(.bottom, 20)
-                        TextFieldController(text: $loginTextFieldData.userName,
-                                            placeholder: "User Name")
-                        TextFieldController(text: $loginTextFieldData.passWord, placeholder: "password")
-                            .padding()
-                        Spacer()
-                        ////                    SecureField("Password", text: .constant(""))
-                        ////                        .font(.system(size: 20, weight: .bold, design: .default))
-                        ////                        .padding()
-                        ////                        .background(
-                        ////                            RoundedRectangle(cornerRadius: 15)
-                        ////                                .fill(Color.white)
-                        //                        )
-                        //                        .overlay(
-                        //                            RoundedRectangle(cornerRadius: 15)
-                        //                                .stroke(Color.black, lineWidth: 1))
+                LinearGradient(gradient: Gradient(colors: [Color(red: 202/255, green: 204/255, blue: 206/255),Color(red: 0/255, green: 119/255, blue: 181/255) ]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .edgesIgnoringSafeArea(.all) // Extend the gradient to the edges of the view
+                
+                VStack{
+                
+                
                         
-                        NavigationLinkController(destination: MainView(), label: "Login")
+                        Image("LI-Logo")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 200, height: 200)
+                            .clipShape(Circle())
+                            .overlay(
+                                                    Circle()
+                                                        .stroke(Color(red: 230/255, green: 133/255, blue: 0/255), lineWidth: 4)
+                                                        .padding(165)  // Adjust the padding value to get the desired size
+                                                )
+                            .shadow(radius: 7)
+                            .padding()
+                    VStack{ NavigationLinkController(destination: MainView(), label: "Login", fontSize: 40)
+                    }
+                        
+                        
+                        
+                    
+                        
+                    
+                  
 
                     }
                     
                 }
-                Spacer()
+        
             }
             
             
@@ -64,6 +64,6 @@ struct LoginView: View {
             LoginView()
         }
     }
-}
+
 
 

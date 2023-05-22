@@ -10,7 +10,7 @@ import UIKit
 @main
 struct The_Mentor_AppApp: App {
     @StateObject private var appState = AppState()
-
+    let profiles: [TheMentorBrain] = [] // Provide the array of TheMentorBrain instances
     var body: some Scene {
         WindowGroup {
             if appState.showingLaunchScreen {
@@ -22,6 +22,7 @@ struct The_Mentor_AppApp: App {
                     }
             } else {
                 ContentView()
+                //SearchView(profiles: profiles) // this is here because i can't figure out why the search doesn't work when i build the app.
             }
         }
     }

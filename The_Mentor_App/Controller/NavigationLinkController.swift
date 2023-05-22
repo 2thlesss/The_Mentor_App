@@ -11,16 +11,21 @@ import UIKit
 
 
 struct NavigationLinkController<Destination: View>: View {
-    let destination : Destination
-    let label : String
+    let destination: Destination
+    let label: String
+    let fontSize: CGFloat
     
     var body: some View {
-        NavigationLink(destination: destination ){Text(label)}
-            .font(.title)
-            .foregroundColor(.white)
-            .padding()
-            .frame(width: 220, height: 60)
-            .background(Color(.blue))
-            .cornerRadius(15.0)
+        NavigationLink(destination: destination) {
+            Text(label)
+                .font(.custom("AmericanTypewriter-Bold", size: fontSize))
+                .bold()
+                .foregroundColor(.white)
+                .padding()
+                .frame(width: 220, height: 60)
+                .background(Color(red: 0/255, green: 160/255, blue: 220/255))
+                .cornerRadius(15.0)
+                .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
+        }
     }
 }

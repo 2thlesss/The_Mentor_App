@@ -14,10 +14,17 @@ struct TitleTextController: View {
     var body: some View {
         
         Text(title)
-            .font(.largeTitle)
-            .fontWeight(.bold)
-            .foregroundColor(.init(red: 0, green: 0, blue: 255))
+            .font(.custom("AmericanTypewriter-Bold", size: 50))
+            .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y:5)
+        //center the text
             .multilineTextAlignment(.center)
-            .padding(.bottom, 20.0)
+            .padding()
+        
+        //soft blue background oval behind the text
+            .background(Color(red: 5/255, green: 118/255, blue: 179/255))
+            .cornerRadius(20)
+            .foregroundColor(.white)
+            .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y:5)
+            .padding()
     }
 }

@@ -7,21 +7,29 @@
 import SwiftUI
 
 struct MainView: View {
-    let profiles: [TheMentorBrain] = [] // Provide the array of TheMentorBrain instances
+    @State private var  profiles : [TheMentorBrain] = []
 
     var body: some View {
         ZStack {
-            // Background color
-            Color(.init(red: 0, green: 255, blue: 255, alpha: 0.5))
-                .edgesIgnoringSafeArea(.all)
+            LinearGradient(gradient: Gradient(colors: [Color(red: 202/255, green: 204/255, blue: 206/255),Color(red: 0/255, green: 119/255, blue: 181/255) ]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                .edgesIgnoringSafeArea(.all) // Extend the gradient to the edges of the view
+            
+            
             VStack {
-                TitleTextController(title: "Welcome to the Mentor App!")
-                Spacer()
+                TitleTextController(title: "The Mentor App")
+        
                 HStack {
-                    NavigationViewController(screen: "Chat", destination: ChatView())
-                    NavigationViewController(screen: "Find a Mentor", destination: SearchView(profiles: profiles)) // Provide the profiles array
+                    
+                    NavigationLinkController(destination: SearchView(profiles: profiles), label: "Find a Mentor", fontSize: 25)
+                
+                    
                 }
+                
+                
             }
+        }
+        .onAppear{
+            profiles = brainTest()
         }
     }
 }

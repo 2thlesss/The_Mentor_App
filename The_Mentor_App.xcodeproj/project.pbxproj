@@ -26,6 +26,7 @@
 		97BAEF472A1BB6AE00A7D750 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BAEF462A1BB6AE00A7D750 /* Message.swift */; };
 		97BAEF4B2A1BB97A00A7D750 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BAEF4A2A1BB97A00A7D750 /* Constants.swift */; };
 		97BAEF512A1BE4C700A7D750 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97BAEF502A1BE4C700A7D750 /* GoogleService-Info.plist */; };
+		97BAEF532A1BFC9A00A7D750 /* previewViewIHope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BAEF522A1BFC9A00A7D750 /* previewViewIHope.swift */; };
 		97D22CA22A0AD4660053C0DB /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D22CA12A0AD4660053C0DB /* SearchView.swift */; };
 		97DB981D2A0EEBA300800D81 /* searchBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB981C2A0EEBA300800D81 /* searchBrain.swift */; };
 		97DB98222A0EEBAD00800D81 /* TheMentorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB981F2A0EEBAD00800D81 /* TheMentorBrain.swift */; };
@@ -77,6 +78,7 @@
 		97BAEF462A1BB6AE00A7D750 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		97BAEF4A2A1BB97A00A7D750 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		97BAEF502A1BE4C700A7D750 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		97BAEF522A1BFC9A00A7D750 /* previewViewIHope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = previewViewIHope.swift; sourceTree = "<group>"; };
 		97D22CA12A0AD4660053C0DB /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		97DB981C2A0EEBA300800D81 /* searchBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchBrain.swift; sourceTree = "<group>"; };
 		97DB981E2A0EEBAD00800D81 /* brainTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = brainTest.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 		97F3E93029F825530016D9FF /* The_Mentor_App */ = {
 			isa = PBXGroup;
 			children = (
+				97BAEF522A1BFC9A00A7D750 /* previewViewIHope.swift */,
 				97F3E93129F825530016D9FF /* The_Mentor_AppApp.swift */,
 				9712831729FAC6CF00BC3346 /* Model */,
 				9712831629FAC6B700BC3346 /* View */,
@@ -404,6 +407,7 @@
 				97DB983E2A0EF09900800D81 /* NavigationLinkController.swift in Sources */,
 				97D22CA22A0AD4660053C0DB /* SearchView.swift in Sources */,
 				97BAEF472A1BB6AE00A7D750 /* Message.swift in Sources */,
+				97BAEF532A1BFC9A00A7D750 /* previewViewIHope.swift in Sources */,
 				97DB98392A0EF09900800D81 /* BubbleButtonStyle.swift in Sources */,
 				97DB981D2A0EEBA300800D81 /* searchBrain.swift in Sources */,
 				97DB98222A0EEBAD00800D81 /* TheMentorBrain.swift in Sources */,

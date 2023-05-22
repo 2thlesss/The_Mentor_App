@@ -14,7 +14,7 @@ struct RegisterView: View {
     @State private var isRegistered = false
     
     var body: some View {
-        NavigationView {
+        
             ZStack {
                 LinearGradient(gradient: Gradient(colors: [Color(red: 202/255, green: 204/255, blue: 206/255), Color(red: 0/255, green: 119/255, blue: 181/255)]), startPoint: .topLeading, endPoint: .bottomTrailing)
                     .edgesIgnoringSafeArea(.all) // Extend the gradient to the edges of the view
@@ -41,15 +41,18 @@ struct RegisterView: View {
                             .cornerRadius(10)
                     }
                     .padding()
-                }
-            }
-            .onAppear {
-                if isRegistered {
-                    navigateToMainView()
+                    
+                    NavigationLink(destination: MainView(), isActive: $isRegistered) {
+                        EmptyView()
+                    }
+                    .isDetailLink(false)
+                    .opacity(0.0)
+                    .frame(width: 0, height: 0)
+                    .disabled(true)
                 }
             }
         }
-    }
+    
     
     func register() {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
@@ -63,22 +66,6 @@ struct RegisterView: View {
             }
         }
     }
-    
-    func navigateToMainView() {
-        DispatchQueue.main.async {
-            isRegistered = false // Reset the flag
-            
-            // Programmatically navigate to MainView
-            let mainView = MainView()
-            
-            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-               let window = windowScene.windows.first {
-                window.rootViewController = UIHostingController(rootView: mainView)
-                window.makeKeyAndVisible()
-            }
-        }
-    }
-
 }
 
 struct RegisterView_Previews: PreviewProvider {

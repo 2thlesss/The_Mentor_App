@@ -22,7 +22,7 @@ struct MainView: View {
                     
                     NavigationLinkController(destination: SearchView(profiles: profiles), label: "Find a Mentor", fontSize: 25)
                 
-                    
+                    NavigationLinkController(destination: ChatView(), label: "Talk with a Mentor", fontSize: 25)
                 }
                 
                 

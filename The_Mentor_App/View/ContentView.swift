@@ -4,49 +4,36 @@
 //
 //  Created by Thomas Jadie Reeves on 4/25/23.
 //
-import UIKit     // Importing UIKit framework
-import SwiftUI   // Importing SwiftUI framework
+import SwiftUI
 
-struct ContentView: View {    // Defining a SwiftUI view called ContentView
-    
-    var body: some View {    // Defining the body of the ContentView view
-        
-        NavigationView {    // Wrapping the content in a NavigationView
-            
-            ZStack {    // Using a ZStack to layer views on top of each other
-                
-                // Creating a linear gradient background
+struct ContentView: View {
+    @EnvironmentObject private var appState: AppState
+    var body: some View {
+        NavigationView {
+            ZStack {
                 LinearGradient(gradient: Gradient(colors: [Color(red: 202/255, green: 204/255, blue: 206/255), Color(red: 0/255, green: 119/255, blue: 181/255)]),
                                startPoint: .topLeading,
                                endPoint: .bottomTrailing)
-                .edgesIgnoringSafeArea(.all) // Extend the gradient to the edges of the view
+                    .edgesIgnoringSafeArea(.all)
                 
-                VStack {    // Using a VStack to vertically stack views
+                VStack {
+                    TitleTextController(title: "The Mentor App")
+                    Spacer()
                     
-                    TitleTextController(title: "The Mentor App")   // Displaying a custom view called TitleTextController
-                    Spacer()    // Creating flexible space between views
-                    
-                    
-                    // Another VStack for stacking views
-                    
-                    NavigationLinkController(destination: LoginView(), label: "Login", fontSize: 40)    // Displaying a custom view called NavigationLinkController
+                    NavigationLinkController(destination: LoginView(), label: "Login", fontSize: 40)
                     
                     NavigationLinkController(destination: RegisterView(), label: "Register", fontSize: 40)
-                }
-                
-               
                     
-                    Spacer()    // Creating flexible space
+                    Spacer()
                 }
             }
         }
-        
-        
-        
-        struct ContentView_Previews: PreviewProvider {   // Preview provider for ContentView
-            static var previews: some View {
-                ContentView()   // Previewing the ContentView
-            }
-        }
-        
     }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .environmentObject(AppState())
+    }
+}

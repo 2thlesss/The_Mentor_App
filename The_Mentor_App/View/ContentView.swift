@@ -27,10 +27,10 @@ struct ContentView: View {
                     
                     
                     
-                    NavigationLinkController(destination: LoginView(), label: "Login")
+                    NavigationLinkController(destination: MainView(), label: "Login", fontSize: 40)
                     Spacer()
                         .frame(minHeight: 0, idealHeight: 30, maxHeight: 50)
-                    NavigationLinkController(destination: RegisterView(), label: "Register")
+                    
                     
                 }
                 VStack{

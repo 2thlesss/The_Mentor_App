@@ -20,8 +20,7 @@ struct MainView: View {
         
                 HStack {
                     
-                    NavigationLinkController(destination: SearchView(profiles: profiles), label: "Find a Mentor")
-                   
+                    NavigationLinkController(destination: SearchView(profiles: profiles), label: "Find a Mentor", fontSize: 25)
                 
                     
                 }

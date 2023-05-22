@@ -42,8 +42,7 @@ struct RegisterView: View {
                     TextFieldController(text: $textFieldData.password, placeholder: "Enter Password")
                 }
                 // Display a button that navigates to the MainView when pressed
-                NavigationLinkController(destination: MainView(), label: "Register")
-                
+                NavigationLinkController(destination: MainView(), label: "Login", fontSize: 40)
             
             }
             // Push the VStack up to the top of the screen

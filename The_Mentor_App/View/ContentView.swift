@@ -19,34 +19,34 @@ struct ContentView: View {    // Defining a SwiftUI view called ContentView
                 LinearGradient(gradient: Gradient(colors: [Color(red: 202/255, green: 204/255, blue: 206/255), Color(red: 0/255, green: 119/255, blue: 181/255)]),
                                startPoint: .topLeading,
                                endPoint: .bottomTrailing)
-                    .edgesIgnoringSafeArea(.all) // Extend the gradient to the edges of the view
+                .edgesIgnoringSafeArea(.all) // Extend the gradient to the edges of the view
                 
                 VStack {    // Using a VStack to vertically stack views
                     
                     TitleTextController(title: "The Mentor App")   // Displaying a custom view called TitleTextController
                     Spacer()    // Creating flexible space between views
+                    
+                    
+                    // Another VStack for stacking views
+                    
+                    NavigationLinkController(destination: LoginView(), label: "Login", fontSize: 40)    // Displaying a custom view called NavigationLinkController
+                    
+                    NavigationLinkController(destination: RegisterView(), label: "Register", fontSize: 40)
                 }
                 
-                VStack {    // Another VStack for stacking views
-                    
-                    NavigationLinkController(destination: MainView(), label: "Login", fontSize: 40)    // Displaying a custom view called NavigationLinkController
-                    Spacer()
-                        .frame(minHeight: 0, idealHeight: 30, maxHeight: 50)   // Setting the height of the spacer
-                    
-                }
-                
-                VStack {    // Another VStack for spacing
+               
                     
                     Spacer()    // Creating flexible space
                 }
             }
         }
+        
+        
+        
+        struct ContentView_Previews: PreviewProvider {   // Preview provider for ContentView
+            static var previews: some View {
+                ContentView()   // Previewing the ContentView
+            }
+        }
+        
     }
-}
-
-struct ContentView_Previews: PreviewProvider {   // Preview provider for ContentView
-    static var previews: some View {
-        ContentView()   // Previewing the ContentView
-    }
-}
-

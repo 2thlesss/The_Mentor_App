@@ -4,15 +4,35 @@
 //
 //  Created by Thomas Jadie Reeves on 4/25/23.
 //
-
-import SwiftUI
 import UIKit
+import SwiftUI
 import Firebase
+
+struct FirebaseAppKey: EnvironmentKey {
+    static var defaultValue: FirebaseApp? {
+        FirebaseApp.app()
+    }
+}
+
+extension EnvironmentValues {
+    var firebaseApp: FirebaseApp? {
+        get { self[FirebaseAppKey.self] }
+        set { self[FirebaseAppKey.self] = newValue }
+    }
+}
 
 @main
 struct The_Mentor_AppApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     @StateObject private var appState = AppState()
     let profiles: [TheMentorBrain] = [] // Provide the array of TheMentorBrain instances
+    
+    init() {
+        FirebaseApp.configure()
+        let db = Firestore.firestore()
+        print(db)
+    }
     
     var body: some Scene {
         WindowGroup {
@@ -25,7 +45,9 @@ struct The_Mentor_AppApp: App {
                     }
             } else {
                 ContentView()
-                //SearchView(profiles: profiles) // this is here because i can't figure out why the search doesn't work when i build the app.
+                    .environmentObject(appState) // Add the appState as an environment object
+                    .environment(\.firebaseApp, FirebaseApp.app()) // Pass the Firebase app instance as environment object
+                //SearchView(profiles: profiles) // Uncomment if needed
             }
         }
     }
@@ -35,10 +57,9 @@ class AppState: ObservableObject {
     @Published var showingLaunchScreen: Bool = true
 }
 
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        FirebaseApp.configure() // Initialize Firebase
-        
+@objc
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Additional configuration or setup for Firebase can be done here if needed
         
         return true

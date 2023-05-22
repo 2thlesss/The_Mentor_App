@@ -25,6 +25,7 @@
 		97BAEF452A1BB65900A7D750 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BAEF442A1BB65900A7D750 /* ChatViewModel.swift */; };
 		97BAEF472A1BB6AE00A7D750 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BAEF462A1BB6AE00A7D750 /* Message.swift */; };
 		97BAEF4B2A1BB97A00A7D750 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BAEF4A2A1BB97A00A7D750 /* Constants.swift */; };
+		97BAEF512A1BE4C700A7D750 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97BAEF502A1BE4C700A7D750 /* GoogleService-Info.plist */; };
 		97D22CA22A0AD4660053C0DB /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D22CA12A0AD4660053C0DB /* SearchView.swift */; };
 		97DB981D2A0EEBA300800D81 /* searchBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB981C2A0EEBA300800D81 /* searchBrain.swift */; };
 		97DB98222A0EEBAD00800D81 /* TheMentorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB981F2A0EEBAD00800D81 /* TheMentorBrain.swift */; };
@@ -75,6 +76,7 @@
 		97BAEF442A1BB65900A7D750 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		97BAEF462A1BB6AE00A7D750 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		97BAEF4A2A1BB97A00A7D750 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		97BAEF502A1BE4C700A7D750 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		97D22CA12A0AD4660053C0DB /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		97DB981C2A0EEBA300800D81 /* searchBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchBrain.swift; sourceTree = "<group>"; };
 		97DB981E2A0EEBAD00800D81 /* brainTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = brainTest.swift; sourceTree = "<group>"; };
@@ -147,7 +149,6 @@
 				970DE6382A1413AE0082D681 /* LinkSSOView.swift */,
 				97B2A2A529FAD30800564249 /* LoginView.swift */,
 				97B2A2A729FAD94B00564249 /* RegisterView.swift */,
-				97BAEF442A1BB65900A7D750 /* ChatViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -157,9 +158,11 @@
 			children = (
 				97DB981E2A0EEBAD00800D81 /* brainTest.swift */,
 				97DB981F2A0EEBAD00800D81 /* TheMentorBrain.swift */,
+				97BAEF502A1BE4C700A7D750 /* GoogleService-Info.plist */,
 				97BAEF462A1BB6AE00A7D750 /* Message.swift */,
 				97BAEF4A2A1BB97A00A7D750 /* Constants.swift */,
 				97DB981C2A0EEBA300800D81 /* searchBrain.swift */,
+				97BAEF442A1BB65900A7D750 /* ChatViewModel.swift */,
 				9709FAAB2A0F077B00A25308 /* README.rtf */,
 				97BAEF2E2A1B9CEE00A7D750 /* notes.rtf */,
 			);
@@ -357,6 +360,7 @@
 				97BAEF2F2A1B9CEE00A7D750 /* notes.rtf in Resources */,
 				970DE6372A13BCC70082D681 /* testBrain.json in Resources */,
 				97F3E93629F825540016D9FF /* Assets.xcassets in Resources */,
+				97BAEF512A1BE4C700A7D750 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +569,8 @@
 				DEVELOPMENT_TEAM = 8GKB9JM4V8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "The Mentor App";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -594,6 +600,8 @@
 				DEVELOPMENT_TEAM = 8GKB9JM4V8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "The Mentor App";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

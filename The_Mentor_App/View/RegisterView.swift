@@ -6,57 +6,83 @@
 //
 
 import SwiftUI
+import Firebase
 
-// Define an ObservableObject to store the values of the text fields
-class TextFieldData: ObservableObject {
-    @Published var password: String = "" // Password
-    @Published var userName: String = "" // User name
-}
-
-// Define the main view that displays the registration form
 struct RegisterView: View {
-    // variable and constant for the dictionary to hold UUID/Password
-    @State var dictionary: [String: String] = [:]
-    @State var inputText: String = ""
+    @State private var email = ""
+    @State private var password = ""
+    @State private var isRegistered = false
     
-    let filename = "userData.json"
-
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-
-    // Create an instance of TextFieldData using @StateObject to make it observable
-    @StateObject var textFieldData = TextFieldData()
-
     var body: some View {
-        ZStack {
-            LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                .edgesIgnoringSafeArea(.all) // Extend the gradient to the edges of the view
-            
-            VStack {
-                // Display the title and subtitle for the registration form
-                TitleTextController(title: "Registration")
-                Text("Create an account to get started")
-                    .font(.body).foregroundColor(Color.black)
-                VStack(spacing: 20) {
-                    // Display two text fields for user name and password
-                    TextFieldController(text: $textFieldData.userName, placeholder: "User Name")
-                    TextFieldController(text: $textFieldData.password, placeholder: "Enter Password")
+        NavigationView {
+            ZStack {
+                LinearGradient(gradient: Gradient(colors: [Color(red: 202/255, green: 204/255, blue: 206/255), Color(red: 0/255, green: 119/255, blue: 181/255)]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .edgesIgnoringSafeArea(.all) // Extend the gradient to the edges of the view
+                
+                VStack {
+                    TitleTextController(title: "Register for an Account")
+                    
+                    TextField("Email", text: $email)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                    
+                    SecureField("Password", text: $password)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                    
+                    Button(action: {
+                        register()
+                    }) {
+                        Text("Register")
+                            .font(.custom("AmericanTypewriter-Bold", size: 20))
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                    }
+                    .padding()
                 }
-                // Display a button that navigates to the MainView when pressed
-                NavigationLinkController(destination: MainView(), label: "Login", fontSize: 40)
-            
             }
-            // Push the VStack up to the top of the screen
-            Spacer()
+            .onAppear {
+                if isRegistered {
+                    navigateToMainView()
+                }
+            }
         }
     }
+    
+    func register() {
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            if let error = error {
+                print("Registration failed: \(error.localizedDescription)")
+            } else {
+                // Registration successful, navigate to MainView
+                DispatchQueue.main.async {
+                    isRegistered = true
+                }
+            }
+        }
+    }
+    
+    func navigateToMainView() {
+        DispatchQueue.main.async {
+            isRegistered = false // Reset the flag
+            
+            // Programmatically navigate to MainView
+            let mainView = MainView()
+            
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+               let window = windowScene.windows.first {
+                window.rootViewController = UIHostingController(rootView: mainView)
+                window.makeKeyAndVisible()
+            }
+        }
+    }
+
 }
 
-// Define a preview struct for the RegisterView
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
         RegisterView()
     }
 }
-
-
-

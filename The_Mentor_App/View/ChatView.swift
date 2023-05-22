@@ -15,6 +15,7 @@ struct ChatView: View {
 
     var body: some View {
         NavigationView {
+           
             VStack {
                 List(chatViewModel.messages) { message in
                     MessageRow(message: message)

@@ -21,22 +21,25 @@ class ChatViewModel: ObservableObject {
     }
 
     func loadMessages() {
-        messageListener = db.collection(K.FStore.collectionName)
+        db.collection(K.FStore.collectionName)
             .order(by: K.FStore.dateField)
-            .addSnapshotListener { [weak self] querySnapshot, error in
-                guard let self = self else { return }
-
+            .addSnapshotListener { snapshot, error in
                 if let error = error {
                     print("Error fetching messages: \(error)")
                     return
                 }
 
-                self.messages = querySnapshot?.documents.compactMap { document in
+                guard let documents = snapshot?.documents else {
+                    print("No documents found")
+                    return
+                }
+
+                self.messages = documents.compactMap { document in
                     let data = document.data()
                     let messageSender = data[K.FStore.senderField] as? String
                     let messageBody = data[K.FStore.bodyField] as? String
-                    return Message(id: <#ObjectIdentifier#>, sender: messageSender, body: messageBody)
-                } ?? []
+                    return Message(sender: messageSender!, body: messageBody!)
+                }
             }
     }
 

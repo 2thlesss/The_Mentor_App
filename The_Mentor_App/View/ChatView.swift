@@ -21,8 +21,7 @@ struct ChatView: View {
                     MessageRow(message: message)
                 }
                 .listStyle(.plain)
-
-                HStack {
+                                HStack {
                     TextField("Enter message", text: $messageText)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     Button(action: {
@@ -30,10 +29,15 @@ struct ChatView: View {
                         messageText = ""
                     }) {
                         Image(systemName: "paperplane")
+                            .foregroundColor(.black)
                     }
                     .padding(.horizontal)
+                                    
                 }
                 .padding()
+                .background(LinearGradient(gradient: Gradient(colors: [Color(red: 202/255, green: 204/255, blue: 206/255),Color(red: 0/255, green: 119/255, blue: 181/255) ]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .edgesIgnoringSafeArea(.all))
+
             }
             .navigationTitle(Text("Chat"))
             
@@ -49,20 +53,23 @@ struct MessageRow: View {
     
     var body: some View {
         ZStack{ LinearGradient(gradient: Gradient(colors: [Color(red: 202/255, green: 204/255, blue: 206/255),Color(red: 0/255, green: 119/255, blue: 181/255) ]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                .edgesIgnoringSafeArea(.all) // Extend the gradient to the edges of the view
+                .edgesIgnoringSafeArea(.all)
+                .cornerRadius(10)
+            
+            // Extend the gradient to the edges of the view
             
             HStack {
                 if message.sender == Auth.auth().currentUser?.email {
                     Spacer()
                     Text(message.body)
-                        .padding()
-                        .background(Color(red: 0/255, green: 160/255, blue: 220/255))
+                        .padding(.leading)
+                        
                         .foregroundColor(Color.black)
                         .cornerRadius(10)
                 } else {
                     Text(message.body)
-                        .padding()
-                        .background(Color(red: 0/255, green: 160/255, blue: 220/255))
+                        .padding(.leading)
+                        
                         .foregroundColor(Color.black)
                         .cornerRadius(10)
                     Spacer()

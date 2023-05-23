@@ -7,32 +7,31 @@
 import SwiftUI
 
 struct MainView: View {
-    @State private var  profiles : [TheMentorBrain] = []
-
+    @State private var isSpinning = false
+    @State private var profiles: [TheMentorBrain] = []
+    
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color(red: 202/255, green: 204/255, blue: 206/255),Color(red: 0/255, green: 119/255, blue: 181/255) ]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(gradient: Gradient(colors: [Color(red: 202/255, green: 204/255, blue: 206/255),Color(red: 0/255, green: 119/255, blue: 181/255)]), startPoint: .topLeading, endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea(.all) // Extend the gradient to the edges of the view
-            
             
             VStack {
                 TitleTextController(title: "The Mentor App")
-        
-                HStack {
-                    
-                    NavigationLinkController(destination: SearchView(profiles: profiles), label: "Find a Mentor", fontSize: 25)
+                Spacer()
                 
-                    NavigationLinkController(destination: ChatView(), label: "Talk with a Mentor", fontSize: 25)
+                    Spacer()
+                    VStack {
+                        NavigationLinkController(destination: SearchView(profiles: profiles), label: "Find a Mentor", fontSize: 25)
+                        
+                        NavigationLinkController(destination: ChatView(), label: "Chat", fontSize: 25)
+                    }
                 }
-                
-                
+            }
+            .onAppear {
+                profiles = brainTest()
             }
         }
-        .onAppear{
-            profiles = brainTest()
-        }
     }
-}
 
 
 struct MainView_Previews: PreviewProvider {
@@ -40,6 +39,3 @@ struct MainView_Previews: PreviewProvider {
         MainView()
     }
 }
-
-
-

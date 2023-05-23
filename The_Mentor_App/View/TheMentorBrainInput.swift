@@ -58,56 +58,62 @@ struct TheMentorBrainInput: View {
                         .cornerRadius(15.0)
                         .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
                 }
-                
                 TextField("Certifications", text: $newCertification)
-                                   .font(.system(size: 20, weight: .bold, design: .default))
-                                   .foregroundColor(.black)
-                                   .padding()
-                                   .background(
-                                       RoundedRectangle(cornerRadius: 15)
-                                           .fill(Color.white)
-                                   )
-                                   .overlay(
-                                       RoundedRectangle(cornerRadius: 15)
-                                           .stroke(Color.black, lineWidth: 1))
-                               Button(action: {
-                                   certifications.append(newCertification)
-                                   newCertification = ""
-                               }){Text("Add Certifications")
-                                   
-                                       .bold()
-                                       .foregroundColor(.white)
-                                       .padding()
-                                       .frame(width: 220, height: 40)
-                                       .background(Color(red: 0/255, green: 160/255, blue: 220/255))
-                                       .cornerRadius(15.0)
-                                       .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
-                               }
-                               
-                               TextField("Skills", text: $newSkill)
-                                   .font(.system(size: 20, weight: .bold, design: .default))
-                                   .foregroundColor(.black)
-                                   .padding()
-                                   .background(
-                                       RoundedRectangle(cornerRadius: 15)
-                                           .fill(Color.white)
-                                   )
-                                   .overlay(
-                                       RoundedRectangle(cornerRadius: 15)
-                                           .stroke(Color.black, lineWidth: 1))
-                               Button(action: {
-                                   skill.append(newSkill)
-                                   newCertification = ""
-                               }){Text("Add Skills")
-                                       .bold()
-                                       .foregroundColor(.white)
-                                       .padding()
-                                       .frame(width: 220, height: 40)
-                                       .background(Color(red: 0/255, green: 160/255, blue: 220/255))
-                                       .cornerRadius(15.0)
-                                       .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
-                               }
-                           }
+                    .font(.system(size: 20, weight: .bold, design: .default))
+                    .foregroundColor(.black)
+                    .padding()
+                    .background(
+                        RoundedRectangle(cornerRadius: 15)
+                            .fill(Color.white)
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 15)
+                            .stroke(Color.black, lineWidth: 1)
+                    )
+                
+                Button(action: {
+                    certifications.append(newCertification)
+                    newCertification = ""
+                }) {
+                    Text("Add Certifications")
+                        .bold()
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(width: 220, height: 40)
+                        .background(Color(red: 0/255, green: 160/255, blue: 220/255))
+                        .cornerRadius(15.0)
+                        .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
+                }
+                
+                TextField("Skills", text: $newSkill)
+                    .font(.system(size: 20, weight: .bold, design: .default))
+                    .foregroundColor(.black)
+                    .padding()
+                    .background(
+                        RoundedRectangle(cornerRadius: 15)
+                            .fill(Color.white)
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 15)
+                            .stroke(Color.black, lineWidth: 1)
+                    )
+                Button(action: {
+                    skill.append(newSkill)
+                    newCertification = ""
+                }) {
+                    Text("Add Skills")
+                        .bold()
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(width: 220, height: 40)
+                        .background(Color(red: 0/255, green: 160/255, blue: 220/255))
+                        .cornerRadius(15.0)
+                        .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
+                }
+            
+            }
+            
+            HStack{
                 Button(action: {
                     let mentorBrainData = TheMentorBrain(
                         name: name,
@@ -134,10 +140,21 @@ struct TheMentorBrainInput: View {
                     }
                 }) {
                     Text("Submit")
+                        .bold()
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(width: 220, height: 40)
+                        .background(Color(red: 0/255, green: 160/255, blue: 220/255))
+                        .cornerRadius(15.0)
+                        .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
                 }
             }
         }
+        
     }
+    
+    
+}
 
 
 struct TheMentorBrainInput_Previews: PreviewProvider {

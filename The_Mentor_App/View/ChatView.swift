@@ -15,8 +15,12 @@ struct ChatView: View {
 
     var body: some View {
         
-           
+        
             VStack {
+                HStack{
+                    NavigationLinkController(destination: CreateGroupChatView(), label: "New Chat", fontSize: 20)
+                        .padding(.trailing)
+                }
                 List(chatViewModel.messages) { message in
                     MessageRow(message: message)
                 }

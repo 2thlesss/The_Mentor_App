@@ -22,7 +22,7 @@ struct MainView: View {
                     Spacer()
                     VStack {
                         NavigationLinkController(destination: SearchView(profiles: profiles), label: "Find a Mentor", fontSize: 25)
-                        
+                        NavigationLinkController(destination: TheMentorBrainInput(), label: " Create Profile", fontSize: 25)
                         NavigationLinkController(destination: ChatView(), label: "Chat", fontSize: 25)
                     }
                 }

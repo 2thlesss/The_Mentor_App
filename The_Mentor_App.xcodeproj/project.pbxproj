@@ -16,6 +16,11 @@
 		97626EAC2A12512500861E26 /* ProfileDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97626EAB2A12512500861E26 /* ProfileDetailView.swift */; };
 		977368D12A1D3EDA00B33DE3 /* CreateGroupChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977368D02A1D3EDA00B33DE3 /* CreateGroupChatView.swift */; };
 		977368D32A1D409700B33DE3 /* TheMentorBrainInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977368D22A1D409700B33DE3 /* TheMentorBrainInput.swift */; };
+		977368D52A1E237C00B33DE3 /* BackgroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977368D42A1E237C00B33DE3 /* BackgroundGradient.swift */; };
+		977368D72A1E25DF00B33DE3 /* ProfileButtonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977368D62A1E25DF00B33DE3 /* ProfileButtonText.swift */; };
+		977368D92A1E300200B33DE3 /* SkillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977368D82A1E300200B33DE3 /* SkillsView.swift */; };
+		977368DB2A1E39AF00B33DE3 /* CertsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977368DA2A1E39AF00B33DE3 /* CertsView.swift */; };
+		977368DD2A1E39CC00B33DE3 /* ExpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977368DC2A1E39CC00B33DE3 /* ExpView.swift */; };
 		97B2A2A629FAD30800564249 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B2A2A529FAD30800564249 /* LoginView.swift */; };
 		97B2A2A829FAD94B00564249 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B2A2A729FAD94B00564249 /* RegisterView.swift */; };
 		97B2A2AA29FADCA000564249 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B2A2A929FADCA000564249 /* MainView.swift */; };
@@ -74,6 +79,11 @@
 		97626EAB2A12512500861E26 /* ProfileDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailView.swift; sourceTree = "<group>"; };
 		977368D02A1D3EDA00B33DE3 /* CreateGroupChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupChatView.swift; sourceTree = "<group>"; };
 		977368D22A1D409700B33DE3 /* TheMentorBrainInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMentorBrainInput.swift; sourceTree = "<group>"; };
+		977368D42A1E237C00B33DE3 /* BackgroundGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradient.swift; sourceTree = "<group>"; };
+		977368D62A1E25DF00B33DE3 /* ProfileButtonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButtonText.swift; sourceTree = "<group>"; };
+		977368D82A1E300200B33DE3 /* SkillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsView.swift; sourceTree = "<group>"; };
+		977368DA2A1E39AF00B33DE3 /* CertsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertsView.swift; sourceTree = "<group>"; };
+		977368DC2A1E39CC00B33DE3 /* ExpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpView.swift; sourceTree = "<group>"; };
 		97B2A2A529FAD30800564249 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		97B2A2A729FAD94B00564249 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		97B2A2A929FADCA000564249 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -157,6 +167,9 @@
 				977368D02A1D3EDA00B33DE3 /* CreateGroupChatView.swift */,
 				970DE6382A1413AE0082D681 /* LinkSSOView.swift */,
 				977368D22A1D409700B33DE3 /* TheMentorBrainInput.swift */,
+				977368DA2A1E39AF00B33DE3 /* CertsView.swift */,
+				977368DC2A1E39CC00B33DE3 /* ExpView.swift */,
+				977368D82A1E300200B33DE3 /* SkillsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,12 +194,14 @@
 			isa = PBXGroup;
 			children = (
 				97DB98322A0EF09900800D81 /* BubbleButtonStyle.swift */,
+				977368D42A1E237C00B33DE3 /* BackgroundGradient.swift */,
 				97DB98382A0EF09900800D81 /* CustomBackButton.swift */,
 				97DB98362A0EF09900800D81 /* ImageViewController.swift */,
 				97DB98372A0EF09900800D81 /* NavigationLinkController.swift */,
 				97DB98332A0EF09900800D81 /* NavigationViewController.swift */,
 				97DB98342A0EF09900800D81 /* TextFieldController.swift */,
 				97DB98352A0EF09900800D81 /* TitleTextContoller.swift */,
+				977368D62A1E25DF00B33DE3 /* ProfileButtonText.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -396,12 +411,17 @@
 			files = (
 				97DB983C2A0EF09900800D81 /* TitleTextContoller.swift in Sources */,
 				97BAEF452A1BB65900A7D750 /* ChatViewModel.swift in Sources */,
+				977368D52A1E237C00B33DE3 /* BackgroundGradient.swift in Sources */,
 				97DB983F2A0EF09900800D81 /* CustomBackButton.swift in Sources */,
 				97DB983B2A0EF09900800D81 /* TextFieldController.swift in Sources */,
 				9712832229FAC86900BC3346 /* LaunchScreen.swift in Sources */,
+				977368DB2A1E39AF00B33DE3 /* CertsView.swift in Sources */,
 				97DB983A2A0EF09900800D81 /* NavigationViewController.swift in Sources */,
 				97BAEF4B2A1BB97A00A7D750 /* Constants.swift in Sources */,
+				977368D92A1E300200B33DE3 /* SkillsView.swift in Sources */,
+				977368D72A1E25DF00B33DE3 /* ProfileButtonText.swift in Sources */,
 				97B2A2A829FAD94B00564249 /* RegisterView.swift in Sources */,
+				977368DD2A1E39CC00B33DE3 /* ExpView.swift in Sources */,
 				970DE6342A13BA340082D681 /* brainTest.swift in Sources */,
 				9712831529FAC6A500BC3346 /* ChatView.swift in Sources */,
 				97B2A2A629FAD30800564249 /* LoginView.swift in Sources */,

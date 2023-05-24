@@ -11,18 +11,15 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                LinearGradient(gradient: Gradient(colors: [Color(red: 202/255, green: 204/255, blue: 206/255), Color(red: 0/255, green: 119/255, blue: 181/255)]),
-                               startPoint: .topLeading,
-                               endPoint: .bottomTrailing)
-                    .edgesIgnoringSafeArea(.all)
+                UIController.BackgroundGradient()
                 
                 VStack {
-                    TitleTextController(title: "The Mentor App")
+                    UIController.TitleTextController(title: "The Mentor App")
                     Spacer()
                     
-                    NavigationLinkController(destination: LoginView(), label: "Login", fontSize: 40)
+                    UIController.NavigationLinkController(destination: LoginView(), label: "Login", fontSize: 40)
                     
-                    NavigationLinkController(destination: RegisterView(), label: "Register", fontSize: 40)
+                    UIController.NavigationLinkController(destination: RegisterView(), label: "Register", fontSize: 40)
                     
                     Spacer()
                 }

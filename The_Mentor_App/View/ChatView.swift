@@ -18,7 +18,7 @@ struct ChatView: View {
         
             VStack {
                 HStack{
-                    NavigationLinkController(destination: CreateGroupChatView(), label: "New Chat", fontSize: 20)
+                    UIController.NavigationLinkController(destination: CreateGroupChatView(), label: "New Chat", fontSize: 20)
                         .padding(.trailing)
                 }
                 List(chatViewModel.messages) { message in
@@ -56,9 +56,7 @@ struct MessageRow: View {
     var message: Message
     
     var body: some View {
-        ZStack{ LinearGradient(gradient: Gradient(colors: [Color(red: 202/255, green: 204/255, blue: 206/255),Color(red: 0/255, green: 119/255, blue: 181/255) ]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                .edgesIgnoringSafeArea(.all)
-                .cornerRadius(10)
+        ZStack{ UIController.BackgroundGradient()
             
             // Extend the gradient to the edges of the view
             

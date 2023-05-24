@@ -22,20 +22,29 @@ struct TheMentorBrainInput: View {
 
     var body: some View {
         ZStack {
-            BackgroundGradient()
+            UIController.BackgroundGradient()
             VStack {
                 ScrollView {
-                    TitleTextController(title: "Profile")
-                    TextFieldController(text: $name, placeholder: "First name, Last Name")
-                    TextFieldController(text: $headline, placeholder: "Headline")
-                    TextFieldController(text: $summary, placeholder: "Summary")
+                    UIController.TitleTextController(title: "Profile")
+                        .padding()
+                    UIController.TextFieldController(text: $name, placeholder: "First name, Last Name")
+                        .padding()
+                    UIController.TextFieldController(text: $headline, placeholder: "Headline")
+                        .padding()
+                    UIController.TextFieldController(text: $summary, placeholder: "Summary")
+                        .padding()
+                    UIController.UiDivider()
+                    
+                    
                     ExpView(experiences: Binding<[Experience]>(
                         get: { experiences.map { Experience(title: $0.title, company: $0.company, dates: $0.dates, responsibilities: $0.responsibilities) } },
                         set: { experiences = $0.map { TheMentorBrain.Experience(title: $0.title, company: $0.company, dates: $0.dates, responsibilities: $0.responsibilities) } }
                     ))
-
+                    .padding()
                     CertsView(certifications: $certifications)
+                        .padding()
                     SkillsView(skills: $skill)
+                        .padding()
                 }
             }
         }
@@ -62,14 +71,7 @@ struct TheMentorBrainInput: View {
                                 }
                             }
                         }) {
-                            Text("Submit")
-                                .bold()
-                                .foregroundColor(.white)
-                                .padding()
-                                .frame(width: 220, height: 40)
-                                .background(Color(red: 0/255, green: 160/255, blue: 220/255))
-                                .cornerRadius(15.0)
-                                .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
+                            UIController.ProfileButtonText(profileText: "Submit")
                         }
                     }
                 }
@@ -106,3 +108,4 @@ struct TheMentorBrainInput: View {
                 return dictionary
             }
         }
+

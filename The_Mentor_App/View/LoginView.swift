@@ -15,11 +15,10 @@ struct LoginView: View {
     var body: some View {
         
             ZStack {
-                LinearGradient(gradient: Gradient(colors: [Color(red: 202/255, green: 204/255, blue: 206/255), Color(red: 0/255, green: 119/255, blue: 181/255)]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                    .edgesIgnoringSafeArea(.all) // Extend the gradient to the edges of the view
+                UIController.BackgroundGradient()
                 
                 VStack {
-                    TitleTextController(title: "Login")
+                    UIController.TitleTextController(title: "Login")
                     
                     TextField("Email", text: $email)
                         .textFieldStyle(RoundedBorderTextFieldStyle())

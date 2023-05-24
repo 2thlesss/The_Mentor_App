@@ -13,11 +13,10 @@
 		970DE6392A1413AE0082D681 /* LinkSSOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970DE6382A1413AE0082D681 /* LinkSSOView.swift */; };
 		9712831529FAC6A500BC3346 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9712831429FAC6A500BC3346 /* ChatView.swift */; };
 		9712832229FAC86900BC3346 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9712832129FAC86900BC3346 /* LaunchScreen.swift */; };
+		976242032A1E89D60070A9AB /* UIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976242022A1E89D60070A9AB /* UIController.swift */; };
 		97626EAC2A12512500861E26 /* ProfileDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97626EAB2A12512500861E26 /* ProfileDetailView.swift */; };
 		977368D12A1D3EDA00B33DE3 /* CreateGroupChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977368D02A1D3EDA00B33DE3 /* CreateGroupChatView.swift */; };
 		977368D32A1D409700B33DE3 /* TheMentorBrainInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977368D22A1D409700B33DE3 /* TheMentorBrainInput.swift */; };
-		977368D52A1E237C00B33DE3 /* BackgroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977368D42A1E237C00B33DE3 /* BackgroundGradient.swift */; };
-		977368D72A1E25DF00B33DE3 /* ProfileButtonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977368D62A1E25DF00B33DE3 /* ProfileButtonText.swift */; };
 		977368D92A1E300200B33DE3 /* SkillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977368D82A1E300200B33DE3 /* SkillsView.swift */; };
 		977368DB2A1E39AF00B33DE3 /* CertsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977368DA2A1E39AF00B33DE3 /* CertsView.swift */; };
 		977368DD2A1E39CC00B33DE3 /* ExpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977368DC2A1E39CC00B33DE3 /* ExpView.swift */; };
@@ -37,13 +36,6 @@
 		97D22CA22A0AD4660053C0DB /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D22CA12A0AD4660053C0DB /* SearchView.swift */; };
 		97DB981D2A0EEBA300800D81 /* searchBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB981C2A0EEBA300800D81 /* searchBrain.swift */; };
 		97DB98222A0EEBAD00800D81 /* TheMentorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB981F2A0EEBAD00800D81 /* TheMentorBrain.swift */; };
-		97DB98392A0EF09900800D81 /* BubbleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB98322A0EF09900800D81 /* BubbleButtonStyle.swift */; };
-		97DB983A2A0EF09900800D81 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB98332A0EF09900800D81 /* NavigationViewController.swift */; };
-		97DB983B2A0EF09900800D81 /* TextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB98342A0EF09900800D81 /* TextFieldController.swift */; };
-		97DB983C2A0EF09900800D81 /* TitleTextContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB98352A0EF09900800D81 /* TitleTextContoller.swift */; };
-		97DB983D2A0EF09900800D81 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB98362A0EF09900800D81 /* ImageViewController.swift */; };
-		97DB983E2A0EF09900800D81 /* NavigationLinkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB98372A0EF09900800D81 /* NavigationLinkController.swift */; };
-		97DB983F2A0EF09900800D81 /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB98382A0EF09900800D81 /* CustomBackButton.swift */; };
 		97F3E93229F825530016D9FF /* The_Mentor_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F3E93129F825530016D9FF /* The_Mentor_AppApp.swift */; };
 		97F3E93429F825530016D9FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F3E93329F825530016D9FF /* ContentView.swift */; };
 		97F3E93629F825540016D9FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97F3E93529F825540016D9FF /* Assets.xcassets */; };
@@ -76,11 +68,10 @@
 		970DE6382A1413AE0082D681 /* LinkSSOView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkSSOView.swift; sourceTree = "<group>"; };
 		9712831429FAC6A500BC3346 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		9712832129FAC86900BC3346 /* LaunchScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LaunchScreen.swift; path = "../../../ID TImer/ID TImer/LaunchScreen.swift"; sourceTree = "<group>"; };
+		976242022A1E89D60070A9AB /* UIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIController.swift; sourceTree = "<group>"; };
 		97626EAB2A12512500861E26 /* ProfileDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailView.swift; sourceTree = "<group>"; };
 		977368D02A1D3EDA00B33DE3 /* CreateGroupChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupChatView.swift; sourceTree = "<group>"; };
 		977368D22A1D409700B33DE3 /* TheMentorBrainInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMentorBrainInput.swift; sourceTree = "<group>"; };
-		977368D42A1E237C00B33DE3 /* BackgroundGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradient.swift; sourceTree = "<group>"; };
-		977368D62A1E25DF00B33DE3 /* ProfileButtonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButtonText.swift; sourceTree = "<group>"; };
 		977368D82A1E300200B33DE3 /* SkillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsView.swift; sourceTree = "<group>"; };
 		977368DA2A1E39AF00B33DE3 /* CertsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertsView.swift; sourceTree = "<group>"; };
 		977368DC2A1E39CC00B33DE3 /* ExpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpView.swift; sourceTree = "<group>"; };
@@ -97,13 +88,6 @@
 		97DB981C2A0EEBA300800D81 /* searchBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchBrain.swift; sourceTree = "<group>"; };
 		97DB981E2A0EEBAD00800D81 /* brainTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = brainTest.swift; sourceTree = "<group>"; };
 		97DB981F2A0EEBAD00800D81 /* TheMentorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheMentorBrain.swift; sourceTree = "<group>"; };
-		97DB98322A0EF09900800D81 /* BubbleButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleButtonStyle.swift; sourceTree = "<group>"; };
-		97DB98332A0EF09900800D81 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
-		97DB98342A0EF09900800D81 /* TextFieldController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldController.swift; sourceTree = "<group>"; };
-		97DB98352A0EF09900800D81 /* TitleTextContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleTextContoller.swift; sourceTree = "<group>"; };
-		97DB98362A0EF09900800D81 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
-		97DB98372A0EF09900800D81 /* NavigationLinkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationLinkController.swift; sourceTree = "<group>"; };
-		97DB98382A0EF09900800D81 /* CustomBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
 		97F3E92E29F825530016D9FF /* The_Mentor_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = The_Mentor_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97F3E93129F825530016D9FF /* The_Mentor_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Mentor_AppApp.swift; sourceTree = "<group>"; };
 		97F3E93329F825530016D9FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -193,15 +177,7 @@
 		9712831829FAC6F500BC3346 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				97DB98322A0EF09900800D81 /* BubbleButtonStyle.swift */,
-				977368D42A1E237C00B33DE3 /* BackgroundGradient.swift */,
-				97DB98382A0EF09900800D81 /* CustomBackButton.swift */,
-				97DB98362A0EF09900800D81 /* ImageViewController.swift */,
-				97DB98372A0EF09900800D81 /* NavigationLinkController.swift */,
-				97DB98332A0EF09900800D81 /* NavigationViewController.swift */,
-				97DB98342A0EF09900800D81 /* TextFieldController.swift */,
-				97DB98352A0EF09900800D81 /* TitleTextContoller.swift */,
-				977368D62A1E25DF00B33DE3 /* ProfileButtonText.swift */,
+				976242022A1E89D60070A9AB /* UIController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -409,17 +385,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97DB983C2A0EF09900800D81 /* TitleTextContoller.swift in Sources */,
 				97BAEF452A1BB65900A7D750 /* ChatViewModel.swift in Sources */,
-				977368D52A1E237C00B33DE3 /* BackgroundGradient.swift in Sources */,
-				97DB983F2A0EF09900800D81 /* CustomBackButton.swift in Sources */,
-				97DB983B2A0EF09900800D81 /* TextFieldController.swift in Sources */,
 				9712832229FAC86900BC3346 /* LaunchScreen.swift in Sources */,
 				977368DB2A1E39AF00B33DE3 /* CertsView.swift in Sources */,
-				97DB983A2A0EF09900800D81 /* NavigationViewController.swift in Sources */,
 				97BAEF4B2A1BB97A00A7D750 /* Constants.swift in Sources */,
 				977368D92A1E300200B33DE3 /* SkillsView.swift in Sources */,
-				977368D72A1E25DF00B33DE3 /* ProfileButtonText.swift in Sources */,
 				97B2A2A829FAD94B00564249 /* RegisterView.swift in Sources */,
 				977368DD2A1E39CC00B33DE3 /* ExpView.swift in Sources */,
 				970DE6342A13BA340082D681 /* brainTest.swift in Sources */,
@@ -427,15 +397,13 @@
 				97B2A2A629FAD30800564249 /* LoginView.swift in Sources */,
 				97626EAC2A12512500861E26 /* ProfileDetailView.swift in Sources */,
 				977368D32A1D409700B33DE3 /* TheMentorBrainInput.swift in Sources */,
-				97DB983D2A0EF09900800D81 /* ImageViewController.swift in Sources */,
 				97F3E93429F825530016D9FF /* ContentView.swift in Sources */,
 				97F3E93229F825530016D9FF /* The_Mentor_AppApp.swift in Sources */,
 				97B2A2AA29FADCA000564249 /* MainView.swift in Sources */,
-				97DB983E2A0EF09900800D81 /* NavigationLinkController.swift in Sources */,
 				97D22CA22A0AD4660053C0DB /* SearchView.swift in Sources */,
+				976242032A1E89D60070A9AB /* UIController.swift in Sources */,
 				97BAEF472A1BB6AE00A7D750 /* Message.swift in Sources */,
 				97BAEF532A1BFC9A00A7D750 /* previewViewIHope.swift in Sources */,
-				97DB98392A0EF09900800D81 /* BubbleButtonStyle.swift in Sources */,
 				97DB981D2A0EEBA300800D81 /* searchBrain.swift in Sources */,
 				97DB98222A0EEBAD00800D81 /* TheMentorBrain.swift in Sources */,
 				977368D12A1D3EDA00B33DE3 /* CreateGroupChatView.swift in Sources */,

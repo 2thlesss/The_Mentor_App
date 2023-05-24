@@ -12,13 +12,13 @@ struct SkillsView: View {
 
     var body: some View {
         VStack {
-            TextFieldController(text: $newSkill, placeholder:"Add a skill")
+            UIController.TextFieldController(text: $newSkill, placeholder:"Add a skill")
             
             Button(action: {
                 skills.append(newSkill)
                 newSkill = ""
             }) {
-                ProfileButtonText(profileText: "Add Skill")
+                UIController.ProfileButtonText(profileText: "Add Skill")
             }
             
             ScrollView {

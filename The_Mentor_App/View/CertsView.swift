@@ -12,13 +12,13 @@ struct CertsView: View {
 
     var body: some View {
         VStack {
-            TextFieldController(text: $newCertification, placeholder:"Add Certification")
+            UIController.TextFieldController(text: $newCertification, placeholder:"Add Certification")
             
             Button(action: {
                 certifications.append(newCertification)
                 newCertification = ""
             }) {
-                ProfileButtonText(profileText: "Add Certification")
+                UIController.ProfileButtonText(profileText: "Add Certification")
             }
             
             ScrollView {

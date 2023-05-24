@@ -12,18 +12,17 @@ struct MainView: View {
     
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color(red: 202/255, green: 204/255, blue: 206/255),Color(red: 0/255, green: 119/255, blue: 181/255)]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                .edgesIgnoringSafeArea(.all) // Extend the gradient to the edges of the view
+            UIController.BackgroundGradient()
             
             VStack {
-                TitleTextController(title: "The Mentor App")
+                UIController.TitleTextController(title: "The Mentor App")
                 Spacer()
                 
                     Spacer()
                     VStack {
-                        NavigationLinkController(destination: SearchView(profiles: profiles), label: "Find a Mentor", fontSize: 25)
-                        NavigationLinkController(destination: TheMentorBrainInput(), label: " Create Profile", fontSize: 25)
-                        NavigationLinkController(destination: ChatView(), label: "Chat", fontSize: 25)
+                        UIController.NavigationLinkController(destination: SearchView(profiles: profiles), label: "Find a Mentor", fontSize: 25)
+                        UIController.NavigationLinkController(destination: TheMentorBrainInput(), label: " Create Profile", fontSize: 25)
+                        UIController.NavigationLinkController(destination: ChatView(), label: "Chat", fontSize: 25)
                     }
                 }
             }

@@ -12,7 +12,7 @@
 		970DE6372A13BCC70082D681 /* testBrain.json in Resources */ = {isa = PBXBuildFile; fileRef = 970DE6362A13BCC70082D681 /* testBrain.json */; };
 		970DE6392A1413AE0082D681 /* LinkSSOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970DE6382A1413AE0082D681 /* LinkSSOView.swift */; };
 		9712831529FAC6A500BC3346 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9712831429FAC6A500BC3346 /* ChatView.swift */; };
-		9712832229FAC86900BC3346 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9712832129FAC86900BC3346 /* LaunchScreen.swift */; };
+		971832232A1ED10000F1C1C3 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971832222A1ED10000F1C1C3 /* LaunchScreen.swift */; };
 		976242032A1E89D60070A9AB /* UIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976242022A1E89D60070A9AB /* UIController.swift */; };
 		97626EAC2A12512500861E26 /* ProfileDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97626EAB2A12512500861E26 /* ProfileDetailView.swift */; };
 		977368D12A1D3EDA00B33DE3 /* CreateGroupChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977368D02A1D3EDA00B33DE3 /* CreateGroupChatView.swift */; };
@@ -67,7 +67,7 @@
 		970DE6362A13BCC70082D681 /* testBrain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = testBrain.json; path = The_Mentor_App/Assets.xcassets/testBrain.json; sourceTree = SOURCE_ROOT; };
 		970DE6382A1413AE0082D681 /* LinkSSOView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkSSOView.swift; sourceTree = "<group>"; };
 		9712831429FAC6A500BC3346 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
-		9712832129FAC86900BC3346 /* LaunchScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LaunchScreen.swift; path = "../../../ID TImer/ID TImer/LaunchScreen.swift"; sourceTree = "<group>"; };
+		971832222A1ED10000F1C1C3 /* LaunchScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		976242022A1E89D60070A9AB /* UIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIController.swift; sourceTree = "<group>"; };
 		97626EAB2A12512500861E26 /* ProfileDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailView.swift; sourceTree = "<group>"; };
 		977368D02A1D3EDA00B33DE3 /* CreateGroupChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupChatView.swift; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 		9712831629FAC6B700BC3346 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9712832129FAC86900BC3346 /* LaunchScreen.swift */,
+				971832222A1ED10000F1C1C3 /* LaunchScreen.swift */,
 				97F3E93329F825530016D9FF /* ContentView.swift */,
 				97B2A2A529FAD30800564249 /* LoginView.swift */,
 				97B2A2A729FAD94B00564249 /* RegisterView.swift */,
@@ -386,7 +386,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				97BAEF452A1BB65900A7D750 /* ChatViewModel.swift in Sources */,
-				9712832229FAC86900BC3346 /* LaunchScreen.swift in Sources */,
 				977368DB2A1E39AF00B33DE3 /* CertsView.swift in Sources */,
 				97BAEF4B2A1BB97A00A7D750 /* Constants.swift in Sources */,
 				977368D92A1E300200B33DE3 /* SkillsView.swift in Sources */,
@@ -398,6 +397,7 @@
 				97626EAC2A12512500861E26 /* ProfileDetailView.swift in Sources */,
 				977368D32A1D409700B33DE3 /* TheMentorBrainInput.swift in Sources */,
 				97F3E93429F825530016D9FF /* ContentView.swift in Sources */,
+				971832232A1ED10000F1C1C3 /* LaunchScreen.swift in Sources */,
 				97F3E93229F825530016D9FF /* The_Mentor_AppApp.swift in Sources */,
 				97B2A2AA29FADCA000564249 /* MainView.swift in Sources */,
 				97D22CA22A0AD4660053C0DB /* SearchView.swift in Sources */,

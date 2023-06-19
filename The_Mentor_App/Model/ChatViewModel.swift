@@ -5,6 +5,9 @@
 //  Created by Thomas Jadie Reeves on 5/22/23.
 //
 
+// change all this over to aws amplify
+
+
 import Firebase
 import FirebaseAuth
 import FirebaseFirestore

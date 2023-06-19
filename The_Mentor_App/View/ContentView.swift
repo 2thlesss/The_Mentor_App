@@ -15,12 +15,13 @@ struct ContentView: View {
                 
                 VStack {
                     UIController.TitleTextController(title: "The Mentor App")
+                        .accessibilityLabel("The Mentor App")
                     Spacer()
                     
                     UIController.NavigationLinkController(destination: LoginView(), label: "Login", fontSize: 40)
-                    
+                        .accessibilityLabel("Login")
                     UIController.NavigationLinkController(destination: RegisterView(), label: "Register", fontSize: 40)
-                    
+                        .accessibilityLabel("Register")
                     Spacer()
                 }
             }

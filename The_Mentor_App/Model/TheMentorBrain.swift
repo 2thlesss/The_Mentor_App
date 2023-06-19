@@ -5,6 +5,8 @@
 //  Created by Thomas Jadie Reeves on 5/12/23.
 //
 import Foundation
+// rebuild this to the webflow CMS schema
+    // check to see how we can pull the product schema vs the mentor schema
 
 struct TheMentorBrain: Decodable {
  

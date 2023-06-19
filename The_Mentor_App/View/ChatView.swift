@@ -5,8 +5,7 @@
 //  Created by Thomas Jadie Reeves on 4/27/23.
 //
 import SwiftUI
-import Firebase
-import FirebaseAuth
+import Amplify
 
 struct ChatView: View {
     @StateObject private var chatViewModel = ChatViewModel()

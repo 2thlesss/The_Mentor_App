@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Firebase
+import Amplify
 
 struct RegisterView: View {
     @State private var email = ""

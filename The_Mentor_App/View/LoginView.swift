@@ -5,7 +5,7 @@
 //  Created by Thomas Jadie Reeves on 4/27/23.
 //
 import SwiftUI
-import Firebase
+import Amplify
 
 struct LoginView: View {
     @State private var email = ""

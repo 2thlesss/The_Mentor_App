@@ -35,7 +35,8 @@ class AppState: ObservableObject {
     @Published var showingLaunchScreen: Bool = true
 }
 
-class AppDelegate: NSObject, UIApplicationDelegate {
+class AppDelegate: NSObject, UIApplicationDelegate { // fix this for AWS
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure() // Configure Firebase
         let db = Firestore.firestore() // Access Firestore instance and assign it to 'db'

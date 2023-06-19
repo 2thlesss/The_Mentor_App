@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Firebase
+import Amplify
 
 struct TheMentorBrainInput: View {
     @State private var name = ""

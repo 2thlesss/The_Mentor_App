@@ -13,6 +13,17 @@
 		970DE6392A1413AE0082D681 /* LinkSSOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970DE6382A1413AE0082D681 /* LinkSSOView.swift */; };
 		9712831529FAC6A500BC3346 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9712831429FAC6A500BC3346 /* ChatView.swift */; };
 		971832232A1ED10000F1C1C3 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971832222A1ED10000F1C1C3 /* LaunchScreen.swift */; };
+		971C152C2A40E1AC00C23398 /* AWSAPIPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 971C152B2A40E1AC00C23398 /* AWSAPIPlugin */; };
+		971C152E2A40E1AC00C23398 /* AWSCognitoAuthPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 971C152D2A40E1AC00C23398 /* AWSCognitoAuthPlugin */; };
+		971C15302A40E1AC00C23398 /* AWSDataStorePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 971C152F2A40E1AC00C23398 /* AWSDataStorePlugin */; };
+		971C15322A40E1AC00C23398 /* AWSLocationGeoPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 971C15312A40E1AC00C23398 /* AWSLocationGeoPlugin */; };
+		971C15342A40E1AC00C23398 /* AWSPinpointAnalyticsPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 971C15332A40E1AC00C23398 /* AWSPinpointAnalyticsPlugin */; };
+		971C15362A40E1AC00C23398 /* AWSPinpointPushNotificationsPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 971C15352A40E1AC00C23398 /* AWSPinpointPushNotificationsPlugin */; };
+		971C15382A40E1AC00C23398 /* AWSPluginsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 971C15372A40E1AC00C23398 /* AWSPluginsCore */; };
+		971C153A2A40E1AC00C23398 /* AWSPredictionsPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 971C15392A40E1AC00C23398 /* AWSPredictionsPlugin */; };
+		971C153C2A40E1AC00C23398 /* AWSS3StoragePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 971C153B2A40E1AC00C23398 /* AWSS3StoragePlugin */; };
+		971C153E2A40E1AC00C23398 /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = 971C153D2A40E1AC00C23398 /* Amplify */; };
+		971C15402A40E1AC00C23398 /* CoreMLPredictionsPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 971C153F2A40E1AC00C23398 /* CoreMLPredictionsPlugin */; };
 		976242032A1E89D60070A9AB /* UIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976242022A1E89D60070A9AB /* UIController.swift */; };
 		97626EAC2A12512500861E26 /* ProfileDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97626EAB2A12512500861E26 /* ProfileDetailView.swift */; };
 		977368D12A1D3EDA00B33DE3 /* CreateGroupChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977368D02A1D3EDA00B33DE3 /* CreateGroupChatView.swift */; };
@@ -24,10 +35,6 @@
 		97B2A2A829FAD94B00564249 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B2A2A729FAD94B00564249 /* RegisterView.swift */; };
 		97B2A2AA29FADCA000564249 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B2A2A929FADCA000564249 /* MainView.swift */; };
 		97BAEF2F2A1B9CEE00A7D750 /* notes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 97BAEF2E2A1B9CEE00A7D750 /* notes.rtf */; };
-		97BAEF3D2A1BB23B00A7D750 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 97BAEF3C2A1BB23B00A7D750 /* FirebaseAnalyticsSwift */; };
-		97BAEF3F2A1BB23B00A7D750 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 97BAEF3E2A1BB23B00A7D750 /* FirebaseAuth */; };
-		97BAEF412A1BB23B00A7D750 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 97BAEF402A1BB23B00A7D750 /* FirebaseFirestoreSwift */; };
-		97BAEF432A1BB23B00A7D750 /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 97BAEF422A1BB23B00A7D750 /* FirebaseInAppMessagingSwift-Beta */; };
 		97BAEF452A1BB65900A7D750 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BAEF442A1BB65900A7D750 /* ChatViewModel.swift */; };
 		97BAEF472A1BB6AE00A7D750 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BAEF462A1BB6AE00A7D750 /* Message.swift */; };
 		97BAEF4B2A1BB97A00A7D750 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BAEF4A2A1BB97A00A7D750 /* Constants.swift */; };
@@ -103,10 +110,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97BAEF3D2A1BB23B00A7D750 /* FirebaseAnalyticsSwift in Frameworks */,
-				97BAEF3F2A1BB23B00A7D750 /* FirebaseAuth in Frameworks */,
-				97BAEF432A1BB23B00A7D750 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
-				97BAEF412A1BB23B00A7D750 /* FirebaseFirestoreSwift in Frameworks */,
+				971C15302A40E1AC00C23398 /* AWSDataStorePlugin in Frameworks */,
+				971C153E2A40E1AC00C23398 /* Amplify in Frameworks */,
+				971C15382A40E1AC00C23398 /* AWSPluginsCore in Frameworks */,
+				971C153A2A40E1AC00C23398 /* AWSPredictionsPlugin in Frameworks */,
+				971C15362A40E1AC00C23398 /* AWSPinpointPushNotificationsPlugin in Frameworks */,
+				971C152C2A40E1AC00C23398 /* AWSAPIPlugin in Frameworks */,
+				971C15342A40E1AC00C23398 /* AWSPinpointAnalyticsPlugin in Frameworks */,
+				971C15322A40E1AC00C23398 /* AWSLocationGeoPlugin in Frameworks */,
+				971C152E2A40E1AC00C23398 /* AWSCognitoAuthPlugin in Frameworks */,
+				971C15402A40E1AC00C23398 /* CoreMLPredictionsPlugin in Frameworks */,
+				971C153C2A40E1AC00C23398 /* AWSS3StoragePlugin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,10 +270,17 @@
 			);
 			name = The_Mentor_App;
 			packageProductDependencies = (
-				97BAEF3C2A1BB23B00A7D750 /* FirebaseAnalyticsSwift */,
-				97BAEF3E2A1BB23B00A7D750 /* FirebaseAuth */,
-				97BAEF402A1BB23B00A7D750 /* FirebaseFirestoreSwift */,
-				97BAEF422A1BB23B00A7D750 /* FirebaseInAppMessagingSwift-Beta */,
+				971C152B2A40E1AC00C23398 /* AWSAPIPlugin */,
+				971C152D2A40E1AC00C23398 /* AWSCognitoAuthPlugin */,
+				971C152F2A40E1AC00C23398 /* AWSDataStorePlugin */,
+				971C15312A40E1AC00C23398 /* AWSLocationGeoPlugin */,
+				971C15332A40E1AC00C23398 /* AWSPinpointAnalyticsPlugin */,
+				971C15352A40E1AC00C23398 /* AWSPinpointPushNotificationsPlugin */,
+				971C15372A40E1AC00C23398 /* AWSPluginsCore */,
+				971C15392A40E1AC00C23398 /* AWSPredictionsPlugin */,
+				971C153B2A40E1AC00C23398 /* AWSS3StoragePlugin */,
+				971C153D2A40E1AC00C23398 /* Amplify */,
+				971C153F2A40E1AC00C23398 /* CoreMLPredictionsPlugin */,
 			);
 			productName = The_Mentor_App;
 			productReference = 97F3E92E29F825530016D9FF /* The_Mentor_App.app */;
@@ -335,6 +356,7 @@
 			mainGroup = 97F3E92529F825530016D9FF;
 			packageReferences = (
 				97BAEF3B2A1BB23B00A7D750 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				971C152A2A40E1AC00C23398 /* XCRemoteSwiftPackageReference "amplify-swift" */,
 			);
 			productRefGroup = 97F3E92F29F825530016D9FF /* Products */;
 			projectDirPath = "";
@@ -734,6 +756,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		971C152A2A40E1AC00C23398 /* XCRemoteSwiftPackageReference "amplify-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aws-amplify/amplify-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		97BAEF3B2A1BB23B00A7D750 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -745,25 +775,60 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		97BAEF3C2A1BB23B00A7D750 /* FirebaseAnalyticsSwift */ = {
+		971C152B2A40E1AC00C23398 /* AWSAPIPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 97BAEF3B2A1BB23B00A7D750 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsSwift;
+			package = 971C152A2A40E1AC00C23398 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSAPIPlugin;
 		};
-		97BAEF3E2A1BB23B00A7D750 /* FirebaseAuth */ = {
+		971C152D2A40E1AC00C23398 /* AWSCognitoAuthPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 97BAEF3B2A1BB23B00A7D750 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
+			package = 971C152A2A40E1AC00C23398 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSCognitoAuthPlugin;
 		};
-		97BAEF402A1BB23B00A7D750 /* FirebaseFirestoreSwift */ = {
+		971C152F2A40E1AC00C23398 /* AWSDataStorePlugin */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 97BAEF3B2A1BB23B00A7D750 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestoreSwift;
+			package = 971C152A2A40E1AC00C23398 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSDataStorePlugin;
 		};
-		97BAEF422A1BB23B00A7D750 /* FirebaseInAppMessagingSwift-Beta */ = {
+		971C15312A40E1AC00C23398 /* AWSLocationGeoPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 97BAEF3B2A1BB23B00A7D750 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseInAppMessagingSwift-Beta";
+			package = 971C152A2A40E1AC00C23398 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSLocationGeoPlugin;
+		};
+		971C15332A40E1AC00C23398 /* AWSPinpointAnalyticsPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 971C152A2A40E1AC00C23398 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSPinpointAnalyticsPlugin;
+		};
+		971C15352A40E1AC00C23398 /* AWSPinpointPushNotificationsPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 971C152A2A40E1AC00C23398 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSPinpointPushNotificationsPlugin;
+		};
+		971C15372A40E1AC00C23398 /* AWSPluginsCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 971C152A2A40E1AC00C23398 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSPluginsCore;
+		};
+		971C15392A40E1AC00C23398 /* AWSPredictionsPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 971C152A2A40E1AC00C23398 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSPredictionsPlugin;
+		};
+		971C153B2A40E1AC00C23398 /* AWSS3StoragePlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 971C152A2A40E1AC00C23398 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSS3StoragePlugin;
+		};
+		971C153D2A40E1AC00C23398 /* Amplify */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 971C152A2A40E1AC00C23398 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = Amplify;
+		};
+		971C153F2A40E1AC00C23398 /* CoreMLPredictionsPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 971C152A2A40E1AC00C23398 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = CoreMLPredictionsPlugin;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
